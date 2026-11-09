@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 28086)
-Total output lines: 773
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,7 +67,7 @@ Total output lines: 773
     .hero-copy h1>span:last-child{animation:heroNameFromRight .95s cubic-bezier(.2,.78,.24,1) .12s both}
     @keyframes heroNameFromLeft{from{opacity:0;transform:translateX(-.34em)}to{opacity:1;transform:translateX(0)}}
     @keyframes heroNameFromRight{from{opacity:0;transform:translateX(.34em)}to{opacity:1;transform:translateX(0)}}
-    .hero-motto{font:clamp(1.65rem,3vw,2.4rem)/.95 var(--marker);color:#2f7199;letter-spacing:.01em;transform:rotate(-2deg);transform-origin:left}
+    .hero-motto{font:clamp(1.65rem,3vw,2.4rem)/1.08 var(--marker);color:#2f7199;letter-spacing:.01em;transform:rotate(-2deg);transform-origin:left}
     .hero-lede{max-width:475px;margin:29px 0 27px;color:#575149;font-size:1.02rem}
     .hero-lede strong{color:var(--ink)}
     .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
@@ -142,7 +139,7 @@ Total output lines: 773
     .press-card h4{font:1.8rem/1.02 var(--serif);margin:22px 0 10px;max-width:430px}
     .press-card p{max-width:450px;font-size:.88rem;color:#554f48;margin:0}
     .press-card .read{display:inline-block;margin-top:18px;font-size:.66rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px}
-    .research-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+    .research-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
     .research-main{position:relative;padding:clamp(25px,4vw,43px);background:#e2ebef;clip-path:polygon(0 0,99% 1%,100% 95%,97% 100%,0 98%)}
     .research-main::after{content:"";position:absolute;right:-28px;top:35px;width:70px;height:70px;border:2px solid rgba(65,125,156,.4);border-radius:50%}
     .research-label{font-size:.68rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase;color:#416e83}
@@ -152,7 +149,7 @@ Total output lines: 773
     .journal-line a{border-bottom:1px solid currentColor}
     .research-side{display:grid;gap:16px}
         .research-stamp{position:absolute;right:25px;bottom:20px;border:1px solid #a94b3b;border-radius:50%;width:80px;height:80px;display:grid;place-items:center;text-align:center;color:#a94b3b;font: .72rem/.98 var(--marker);transform:rotate(14deg)}
-    .research-photo{grid-column:1/-1;margin-top:14px;padding:8px;background:#fff;box-shadow:var(--shadow);transform:rotate(1.2deg)}.research-photo img{width:100%;height:200px;object-fit:cover}.research-photo figcaption{font:1.2rem var(--hand);padding:8px 4px 0}
+    .research-photo{grid-column:1/-1;margin:14px 0 0;padding:8px;background:#fff;box-shadow:var(--shadow);transform:rotate(1.2deg);height:100%;min-height:340px}.research-photo img{width:100%;height:310px;object-fit:cover;object-position:center 43%}.research-photo figcaption{font:1.2rem var(--hand);padding:8px 4px 0}
     .competition-wall{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
     .competition-card{padding:24px 21px;min-height:232px;position:relative;background:#f2d166;transform:rotate(var(--angle,0deg));box-shadow:0 12px 25px rgba(63,47,31,.1);transition:transform .3s}
     .competition-card:nth-child(2){--angle:.7deg;background:#d6e5ed}.competition-card:nth-child(3){--angle:-.8deg;background:#ebc6b8}
@@ -297,7 +294,267 @@ Total output lines: 773
     .honor-type{min-height:250px;padding:22px;background:#d8e8ec;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
     .honor-type .type-mark{font-size:.59rem;letter-spacing:.16em;font-weight:900;color:#477381}.honor-type .type-title{font:italic 2rem/.93 var(--serif);position:relative;z-index:1}.honor-type .type-note{font-size:.68rem;line-height:1.4;color:#4f6268}.honor-type .type-star{position:absolute;right:17px;top:52px;font-size:5rem;color:rgba(76,145,173,.18);animation:spin 28s linear infinite}
     .honors-more{margin-top:24px}.competition-video{margin-top:36px;display:grid;grid-template-columns:.7fr 1.3fr;gap:26px;align-items:center;background:#f5e7c9;padding:26px;transform:rotate(-.35deg)}
-    …10086 tokens truncated…CECEP Scholarship Competition Award certificate, 2025"><div class="caption">Paro–CECEP Scholarship</div><div class="subcaption">Competition Award · 2025</div></a></article>
+    .competition-video h3,.life-video-card h3{font:2rem/1 var(--serif);margin:14px 0 8px}.competition-video p,.life-video-card p{font-size:.88rem;color:#575149}
+    .competition-video video,.life-video-card video{display:block;width:100%;max-height:460px;background:#232323;box-shadow:var(--shadow)}
+    .global-grid{grid-template-columns:1fr 1fr}.passport{grid-template-columns:.9fr 1.1fr;min-height:320px}.passport img{height:320px;min-height:0;object-fit:contain;background:#e6e3dc}
+    .life-photo-stack{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(170px,1fr));overflow:visible;align-items:start;gap:20px;padding:22px 8px 28px}
+    .life-shot{width:100%;min-width:0;max-width:320px;justify-self:center}.life-shot img{height:205px;object-fit:contain;background:#eee9df}
+    .life-shot:nth-child(4n+2){margin-top:22px}.life-shot:nth-child(4n+3){margin-top:-14px}.life-shot:nth-child(2),.life-shot:nth-child(3){--tilt:0deg}
+    .life-media-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;align-items:start}
+    .life-video-card{position:relative;background:#fffaf2;padding:24px;box-shadow:0 12px 26px rgba(63,47,31,.08);transform:rotate(var(--life-tilt,-.5deg))}
+    .life-video-card:nth-child(2){--life-tilt:.55deg;background:#e8edf0}.media-label{font-size:.65rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#a14b39}
+    .life-video-card .light-memory img{height:190px;object-fit:contain;background:#e4e1d8}
+    .honor-collage .honor-card:nth-child(3n+1){--tilt:-.5deg}.honor-collage .honor-card:nth-child(3n+2){--tilt:.45deg}.honor-collage .honor-card:nth-child(3n){--tilt:0deg}
+    .city-experience{grid-template-columns:.72fr 1.28fr}
+    @media(max-width:900px){.campus-stories{grid-template-columns:1fr 1fr}.honor-collage{grid-template-columns:repeat(3,minmax(0,1fr))}.life-photo-stack{grid-template-columns:repeat(3,minmax(150px,1fr))}.passport{grid-template-columns:1fr}.passport img{height:220px;min-height:220px}.competition-video{grid-template-columns:1fr}.life-media-grid{grid-template-columns:1fr}}
+    @media(max-width:680px){.honor-collage{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.honor-card{padding:6px 6px 10px}.honor-card img{height:125px}.honor-card .caption{font-size:.92rem;line-height:1.05}.honor-card .subcaption{font-size:.56rem}.honor-type{min-height:182px;padding:12px}.honor-type .type-title{font-size:1.45rem}.honor-type .type-mark{font-size:.48rem}.honor-type .type-note{font-size:.56rem}.honor-type .type-star{font-size:3.4rem;right:8px;top:36px}.life-photo-stack{grid-template-columns:repeat(2,minmax(135px,1fr));gap:12px}.life-shot img{height:160px}.life-shot{padding:6px 6px 33px}.award-pair,.award-pair img{height:125px}.life-shot figcaption{font-size:1rem}.life-shot:nth-child(n){margin-top:0}.experience-card{grid-template-columns:1fr}.story-cover{min-height:205px}.exp-photo.landscape-proof{min-height:0;height:200px;width:100%}.certificate-frame{width:100%}.campus-stories{grid-template-columns:1fr}.campus-story img{height:200px}.global-grid{grid-template-columns:1fr}.passport{grid-template-columns:.9fr 1.1fr}.passport img{height:240px;min-height:240px}}
+    @media(max-width:390px){.award-pair,.award-pair img{height:100px}.passport{grid-template-columns:1fr}.passport img{height:205px;min-height:205px}.honor-card img{height:100px}.honor-card .caption{font-size:.8rem}.honor-card .subcaption{font-size:.51rem}.life-photo-stack{grid-template-columns:repeat(2,minmax(125px,1fr))}}
+
+    /* Art direction: heavier editorial titles, while keeping clear type hierarchy. */
+    h2,.card-title,.pressroom-head h3,.press-card h4,.research-main h3,.passport-copy h3,.life-intro h3,.life-video-card h3,.competition-video h3,.contact-content h2{font-family:var(--serif);font-weight:650;letter-spacing:-.035em;text-wrap:balance}
+    h2{font-weight:800;text-shadow:1.5px 1.5px 0 rgba(242,207,88,.38);-webkit-text-stroke:.18px currentColor}
+    .card-title{font-size:clamp(1.42rem,2.25vw,1.9rem);line-height:1.02;color:#302722;font-style:italic}
+    .pressroom-head h3{font-size:clamp(1.7rem,2.7vw,2.25rem);line-height:1;transform:rotate(-1deg);color:#342b27;font-style:italic}
+    .press-card h4{font-size:clamp(1.35rem,1.9vw,1.72rem);line-height:1.08;color:#302722;position:relative;width:fit-content;max-width:100%;font-style:italic}
+    .press-card h4::after{content:"";position:absolute;height:6px;bottom:-7px;left:0;width:58%;background:var(--chapter-color,var(--coral));opacity:.42;border-radius:60%;transform:rotate(-1.4deg)}
+    .research-main h3{font-size:clamp(1.58rem,2.65vw,2.24rem);line-height:1.16;color:#25383f}
+    .passport-copy h3{font-size:clamp(1.42rem,2vw,1.82rem);line-height:1.04;color:#2e3932;font-style:italic}
+    .life-intro h3{font-size:clamp(2.15rem,3.8vw,3.1rem);line-height:.98;font-style:italic;color:#513b36}
+    .life-video-card h3,.competition-video h3{font-size:clamp(1.7rem,2.7vw,2.2rem);line-height:1.02;font-style:italic}
+    .pressroom-head{padding-bottom:9px;border-bottom:1px dashed rgba(37,34,31,.18)}
+    .press-card .press-meta{font-weight:900}
+    .global-grid .passport{align-items:center;min-height:0}
+    .global-grid .passport img{height:286px;min-height:0;object-fit:contain;background:#e6e3dc}
+    .global-grid .passport:first-child img{height:250px;max-height:250px}
+    .life-photo-stack{grid-template-columns:repeat(4,minmax(170px,1fr));gap:22px;padding:25px 8px 32px}
+    .life-shot:nth-child(4n+1){margin-top:10px;--tilt:-1.3deg}
+    .life-shot:nth-child(4n+2){margin-top:0;--tilt:1deg}
+    .life-shot:nth-child(4n+3){margin-top:18px;--tilt:-.9deg}
+    .life-shot:nth-child(4n){margin-top:5px;--tilt:1.25deg}
+    .life-shot:nth-child(n){transform:rotate(var(--tilt,0deg))}
+    .life-shot:hover{transform:translateY(-7px) rotate(0deg)}
+    .brand-mark img{object-position:57% 49%}
+    .city-news-shot,.agreement-scan{display:block;position:relative;padding:9px;background:#fffaf2;border:1px solid rgba(37,34,31,.1);box-shadow:0 9px 22px rgba(37,34,31,.12);margin:0;min-width:0;transform:rotate(-.5deg);overflow:hidden}
+    .city-news-shot img{width:100%;height:310px;object-fit:contain;background:#f4f7f8}
+    .city-news-shot figcaption{font:1rem var(--hand);padding:5px 1px 0;text-align:center;color:#465d70}
+    .agreement-scan{height:100%;min-height:320px;display:block;padding:7px}
+    .agreement-scan a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#fff}.agreement-scan img{display:block;width:100%;height:100%;max-height:470px;object-fit:contain;background:#fff}
+    .redaction-mosaic{position:absolute;left:8px;right:8px;top:36.5%;bottom:7px;backdrop-filter:blur(13px) contrast(1.16);background-color:rgba(224,219,209,.42);background-image:linear-gradient(0deg,rgba(255,250,242,.2),rgba(255,250,242,.2)),repeating-linear-gradient(0deg,transparent 0 8px,rgba(82,70,58,.16) 8px 12px),repeating-linear-gradient(90deg,transparent 0 8px,rgba(82,70,58,.15) 8px 12px);border-radius:2px;pointer-events:none}
+    .language-switcher{position:relative;display:flex;align-items:center;margin-left:2px}
+    .language-trigger{display:grid;justify-items:center;gap:0;border:0;background:transparent;color:var(--ink);cursor:pointer;padding:3px 4px;line-height:1}
+    .language-trigger svg{width:19px;height:19px;stroke:#a14b39;stroke-width:1.4;fill:none}.language-trigger small{font:700 .46rem var(--sans);letter-spacing:.12em}
+    .language-options{position:absolute;right:0;top:calc(100% + 8px);display:grid;gap:3px;min-width:132px;padding:7px;background:rgba(255,250,242,.97);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.28s cubic-bezier(.2,.8,.2,1);z-index:45}
+    .language-switcher.open .language-options{opacity:1;visibility:visible;transform:translateY(0)}
+    .language-options button{border:0;background:transparent;text-align:left;padding:8px 10px;border-radius:8px;font-size:.72rem;font-weight:750;cursor:pointer}
+    .language-options button:hover{background:#f2dfd5}
+    .contact-scene.started .camera-doodle{animation:cameraClick .72s .22s ease both}
+    .contact-scene.started .camera-flash{animation:flashPop .6s .53s ease both}
+    .photo-reveal{position:absolute;right:4%;top:6%;width:118px;height:152px;padding:8px 8px 22px;background:#fffaf2;box-shadow:0 12px 22px rgba(0,0,0,.24);transform:rotate(8deg) scale(.15);opacity:0;overflow:hidden}
+    .contact-scene.started .photo-reveal{animation:photoPrint .85s .7s cubic-bezier(.18,.83,.25,1) forwards}
+    .print-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%;background:#f4e7d8;border-radius:2px}
+    @keyframes cameraClick{0%,100%{transform:translateY(0) scale(1)}26%{transform:translateY(5px) scale(.97)}43%{transform:translateY(-2px) scale(1.02)}55%{transform:translateY(1px) scale(.99)}}
+    @keyframes flashPop{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+    @keyframes photoPrint{0%{opacity:0;transform:translateY(45px) rotate(17deg) scale(.15)}65%{opacity:1;transform:translateY(-8px) rotate(-7deg) scale(1.06)}100%{opacity:1;transform:translateY(0) rotate(-4deg) scale(1)}}
+    .section .meteor{position:absolute;z-index:3;top:80px;left:54%;width:108px;height:1px;opacity:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(202,129,74,.52),rgba(255,242,190,.78));filter:drop-shadow(0 0 3px rgba(255,229,171,.42));transform:rotate(-20deg)}
+    .section.meteor-flash .meteor{animation:meteorAcross 1.35s ease-out both}
+    @keyframes meteorAcross{0%{opacity:0;transform:translate(32vw,-35px) rotate(-20deg) scaleX(.25)}18%{opacity:.48}80%{opacity:.28}100%{opacity:0;transform:translate(-34vw,52vh) rotate(-20deg) scaleX(1)}}
+    .contact-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.75fr);align-items:center;gap:25px}
+    .contact-content{max-width:680px}
+    .contact-scene{position:relative;min-height:260px;display:grid;place-items:center;z-index:1}
+    .camera-doodle{width:min(100%,320px);overflow:visible;transform-origin:50% 65%}
+    .camera-flash{opacity:0}
+    @media(max-width:900px){.life-photo-stack{grid-template-columns:repeat(4,minmax(135px,1fr));gap:14px}.global-grid .passport img{height:250px}}
+    @media(max-width:680px){.language-switcher{grid-column:1/-1;justify-self:start;margin-top:4px}.language-options{left:0;right:auto}.contact-panel{grid-template-columns:1fr}.contact-scene{min-height:220px}.city-news-shot img{height:210px}.agreement-scan{height:360px;min-height:300px}.agreement-scan img{max-height:340px}.global-grid .passport:first-child img{height:225px;max-height:225px}.life-photo-stack{grid-template-columns:repeat(2,minmax(130px,1fr));gap:14px}.life-shot:nth-child(n){margin-top:0}.life-shot:nth-child(4n+1),.life-shot:nth-child(4n+2){transform:rotate(-.8deg)}.life-shot:nth-child(4n+3),.life-shot:nth-child(4n){transform:rotate(.9deg)}.pressroom-head h3{font-size:1.7rem}.press-card h4{font-size:1.35rem}}
+    @media(prefers-reduced-motion:reduce){.section.meteor-flash .meteor,.contact-scene.started .camera-doodle,.contact-scene.started .photo-reveal{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+    .title-translation{display:block;margin-top:.55rem;font:600 .58em/1.35 var(--sans);letter-spacing:0;color:#7b6559;font-style:normal}
+
+    html[lang^="zh"] .hero-copy h1{white-space:nowrap}
+    html[lang^="zh"] .hero-copy h1>span{display:inline-block}
+    html[lang^="zh"] .hero-motto{font-size:clamp(1.15rem,2.5vw,2.1rem);white-space:nowrap;margin-left:clamp(12px,2.2vw,26px);transform:translateX(8px) rotate(-2deg);transform-origin:left}
+    html[lang^="zh"] .section-head h2,html[lang^="zh"] .passport-copy h3,html[lang^="zh"] .press-card h4,html[lang^="zh"] .life-intro h3,html[lang^="zh"] .life-video-card h3,html[lang^="zh"] .competition-video h3{line-height:1.18}
+    html[lang^="zh"] .research-main h3{line-height:1.2}
+    @media(max-width:680px){html[lang^="zh"] .hero-motto{font-size:clamp(1rem,5.6vw,1.5rem);margin-left:8px;transform:translateX(4px) rotate(-2deg)}}
+
+    .idle-kitten{position:fixed;right:clamp(12px,2vw,32px);bottom:18px;z-index:24;width:126px;height:158px;margin:0;padding:6px;background:#fffaf2;border:1px solid rgba(79,67,53,.12);border-radius:48% 48% 12px 12px;box-shadow:0 12px 28px rgba(63,47,31,.2);opacity:0;visibility:hidden;transform:translateY(14px) rotate(2deg) scale(.96);transition:opacity .42s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility .42s;pointer-events:none;overflow:visible}
+    .idle-kitten::before{content:"";position:absolute;z-index:2;top:-7px;left:37px;width:52px;height:15px;background:rgba(120,169,200,.78);clip-path:polygon(0 7%,100% 0,96% 90%,4% 100%);transform:rotate(-4deg)}
+    .idle-kitten[data-state="grooming"],.idle-kitten[data-state="sleeping"],.idle-kitten[data-state="snoring"]{opacity:1;visibility:visible;transform:translateY(0) rotate(-1.2deg) scale(1)}
+    .idle-kitten .cat-photo{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:cover;border-radius:43% 43% 8px 8px;transition:opacity .55s ease;box-shadow:0 2px 8px rgba(37,34,31,.12)}
+    .idle-kitten .cat-grooming{object-position:center 45%;opacity:1}
+    .idle-kitten .cat-sleeping{object-position:31% center;opacity:0}
+    .idle-kitten[data-state="grooming"] .cat-grooming{animation:kittenGroom 1.2s ease-in-out infinite;transform-origin:56% 46%}
+    .idle-kitten[data-state="sleeping"] .cat-grooming,.idle-kitten[data-state="snoring"] .cat-grooming{opacity:0}
+    .idle-kitten[data-state="sleeping"] .cat-sleeping,.idle-kitten[data-state="snoring"] .cat-sleeping{opacity:1;animation:kittenSleep 3.2s ease-in-out infinite}
+    .kitten-snore{position:absolute;z-index:3;right:-17px;top:12px;color:#4c8196;font:1.1rem var(--hand);letter-spacing:.04em;opacity:0;transform:translateY(8px) rotate(-7deg)}
+    .idle-kitten[data-state="snoring"] .kitten-snore{opacity:1;animation:snoreFloat 2.2s ease-in-out infinite}
+    @keyframes kittenGroom{0%,100%{transform:translateY(0) rotate(0) scale(1)}38%{transform:translateY(-2px) rotate(1deg) scale(1.018)}68%{transform:translateY(1px) rotate(-.6deg) scale(1.006)}}
+    @keyframes kittenSleep{0%,100%{transform:scale(1)}50%{transform:scale(1.024)}}
+    @keyframes snoreFloat{0%,100%{transform:translateY(8px) rotate(-7deg);opacity:.52}50%{transform:translateY(-5px) rotate(-2deg);opacity:.95}}
+    @media(max-width:680px){.idle-kitten{width:98px;height:126px;right:10px;bottom:12px}.idle-kitten::before{left:29px;width:40px;height:13px}.kitten-snore{right:-12px;font-size:.92rem}}
+    @media(prefers-reduced-motion:reduce){.idle-kitten,.idle-kitten .cat-photo,.kitten-snore{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Shi Qingying home"><span class="brand-mark"><img src="images/avatar-lakeside.jpg" alt="Shi Qingying"></span><span>Shi Qingying<br><small style="font-weight:600;letter-spacing:.08em;color:#81796f">Story atlas · Huzhou</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#experience">Experience</a><a href="#research">Research</a><a href="#competitions">Competitions</a><a href="#global">Global</a><a href="#honors">Honors</a><a href="#life">Life</a><a href="#contact">Contact</a>
+      <div class="language-switcher"><button class="language-trigger" aria-label="Choose language" aria-expanded="false" title="Choose language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/></svg><small>LANG</small></button><div class="language-options" role="menu"><button data-language="en" role="menuitem">English</button><button data-language="zh-Hant" role="menuitem">繁體中文</button><button data-language="zh-Hans" role="menuitem">简体中文</button></div></div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker"><span class="spark">✳</span> Storyteller · Student Communicator · Curious Observer</div>
+          <h1><span>Shi</span><span class="surname">Qingying</span></h1>
+          <div class="hero-motto">Stay curious. Stay passionate.</div>
+          <p class="hero-lede">I am drawn to the people and details behind a headline. From city newsrooms and classrooms to international forums, I listen closely, ask better questions and help stories travel across communities.</p>
+          <div class="hero-actions">
+            <a class="button dark" href="#experience">Follow the story <span aria-hidden="true">↘</span></a>
+            <a class="button ghost" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta"><span class="scribble">currently collecting good questions</span><span>✦</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="sunburst"></div><div class="orbit"></div>
+          <svg class="doodle doodle-star" viewBox="0 0 64 64" aria-hidden="true"><path d="M31 5c3 14 7 19 24 22-14 3-20 8-23 29-4-16-9-22-24-24C23 29 28 23 31 5Z"/><path d="m53 7 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z"/></svg>
+          <svg class="doodle doodle-heart" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54S8 39 8 22C8 7 27 6 32 20 38 6 56 8 56 22c0 17-24 32-24 32Z"/></svg>
+          <svg class="doodle doodle-arrow" viewBox="0 0 130 70" aria-hidden="true"><path d="M7 49C35 14 68 12 110 31"/><path d="m95 13 18 18-23 7"/></svg>
+          <svg class="doodle doodle-spiral" viewBox="0 0 80 80" aria-hidden="true"><path d="M39 40c0-9 13-10 16-2 5 14-17 25-29 13-15-16 2-42 22-40 25 2 32 32 20 50"/></svg>
+          <figure class="portrait-card">
+            <img src="images/behind-the-lens.jpg" alt="Shi Qingying photographing behind her camera">
+            <figcaption class="portrait-caption"><span>Behind the lens</span><span>A view from Huzhou</span></figcaption>
+          </figure>
+          <div class="hero-sticker">MAKE<br>ROOM FOR<br>WONDER ✦</div>
+          <div class="hero-side-note">a little bit of everything,<br>with a lot of heart ↗</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>scroll to wander</span><i></i></div>
+    </section>
+
+    <section class="section" id="experience" data-chapter="01"><span class="meteor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot"></span> 01 / Professional experience · Language in motion</div><h2>Words that<br>cross borders.</h2></div><p class="section-note">Translation, teaching and the craft of making local voices travel further. Swipe the story rail →</p></div>
+        <div class="rail-controls"><span>Selected work · drag / swipe to wander</span><div class="rail-buttons"><button type="button" data-rail="experience-stack" data-dir="-1" aria-label="Previous experience">←</button><button type="button" data-rail="experience-stack" data-dir="1" aria-label="Next experience">→</button></div></div>
+        <div class="experience-stack" tabindex="0" aria-label="Horizontal experience gallery. Use arrow keys to explore.">
+          <article class="experience-card reveal city-experience">
+            <figure class="story-cover city-cover city-news-shot"><img src="images/huzhou-news-screenshot.png" alt="Full-page screenshot of Huzhou Today, the Huzhou Municipal Government English news site"><figcaption>Huzhou Today · official English news</figcaption></figure>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">City stories, in English</h3><div class="card-place">News Translation Intern · Huzhou Municipal Government · Remote</div></div><span class="card-date">Apr 2026 — now</span></div>
+            <p class="card-summary">I translate weekly city news for readers beyond Huzhou: finding the lead, preserving the facts and giving institutional language a clear, human rhythm.</p>
+            <details class="more"><summary>Inside the work</summary><div class="details-body"><ul><li>Cover municipal updates, public affairs, civic life, culture, sport and local development.</li><li>Post-edit AI drafts against Chinese source texts, checking omissions, names, titles, terminology and context.</li><li>Rework headlines, leads and sentence structure for international readers, with accuracy and original emphasis intact.</li></ul></div></details>
+            <div class="metric-ribbon"><span class="metric">28 Thursday editions · Apr 30–Nov 5, 2026</span><span class="metric">Source-first editing</span></div></div>
+          </article>
+          <article class="experience-card reveal delay-1">
+            <figure class="story-cover agreement-cover agreement-scan"><a href="images/agreement-original.png" target="_blank" rel="noreferrer"><img src="images/agreement-original.png" alt="Full agreement on the joint professional practice base between Huzhou Normal University and Azerbaijan State University of Economics"></a></figure>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">Campus news & agreements</h3><div class="card-place">Campus News Translation · Huzhou Normal University · Remote</div></div><span class="card-date">May 11, 2026 — now</span></div>
+            <p class="card-summary">I translated campus news and a formal university agreement selected by faculty members. The work called for close reading, consistent institutional terminology and careful handling of people, departments and commitments.</p>
+            <details class="more"><summary>One project I carried</summary><div class="details-body"><p>Independently translated an agreement with Azerbaijan State University of Economics establishing a joint professional practice base for the university’s master’s program. The English version was accepted for institutional use.</p><p><em>Agreement on the Establishment of the Joint Professional Practice Base for the Master’s Program in International Chinese Language Education</em></p></div></details></div>
+          </article>
+          <article class="experience-card reveal">
+            <a class="certificate-frame" href="images/cicg-internship-certificate.jpg" target="_blank" rel="noreferrer"><img class="exp-photo landscape-proof" src="images/cicg-internship-certificate.jpg" alt="Landscape internship certificate from CICG Center for Asia and Pacific; open full scan"></a>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">A first editing room</h3><div class="card-place">Translation Intern · CICG Center for Asia and Pacific · Remote</div></div><span class="card-date">Feb — Mar 2025</span></div>
+            <p class="card-summary">More than 4,000 Chinese characters across economics, environment, culture and international affairs — revised through feedback from professional translators and editors.</p>
+            <details class="more"><summary>What sharpened my ear</summary><div class="details-body"><p>Topics ranged from consumption and green transition to traditional Chinese medicine and China’s bilateral relations. Each round of editing helped me build factual accuracy, logical flow, register and contextual clarity.</p></div></details></div>
+          </article>
+          <article class="experience-card reveal delay-1">
+            <img class="exp-photo" src="images/primary-school-teaching.jpg" alt="Shi Qingying teaching English at Keqiao Experimental Primary School">
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">English in the classroom</h3><div class="card-place">Teaching Practicum · Keqiao Experimental Primary School</div></div><span class="card-date">Teaching experience</span></div><p class="card-summary">A school-based teaching practicum brought lesson planning, classroom communication and language learning into everyday practice.</p><details class="more"><summary>Another classroom</summary><div class="details-body"><p>On May 24, 2025, I also joined a Chinese–foreign co-teaching session at Aishan Changxi Primary School, supporting a bilingual classroom experience.</p></div></details></div>
+          </article>
+        </div>
+
+        <div class="pressroom reveal">
+          <div class="pressroom-head"><h3>Selected Huzhou stories</h3><a href="https://www.huzhou.gov.cn/col/col1229213975/index.html" target="_blank" rel="noreferrer">Huzhou Municipal Government · English news ↗</a></div>
+          <p class="press-intro">Four translated story selections. The official English news column is linked below; direct article pages are included where they could be verified.</p>
+          <div class="press-grid city-stories">
+            <article class="press-card"><div class="press-meta"><span>May 2026 · Sport</span><span>People & place</span></div><h4>Huzhou-Backed Player Wu Yize Becomes First Post-2000 Snooker World Champion</h4><p>A world title told through a local connection: the close 18–17 final and the Huzhou company behind the player.</p><a class="read" href="https://www.huzhou.gov.cn/col/col1229213975/index.html" target="_blank" rel="noreferrer">Huzhou official website ↗</a></article>
+            <article class="press-card"><div class="press-meta"><span>June 2026 · Civic life</span><span>Street scene</span></div><h4>Where Street Vitality and Urban Civility Thrive Side by Side</h4><p>A night market story about balancing vendors’ livelihoods, neighborhood calm and a lively city center.</p><a class="read" href="https://www.huzhou.gov.cn/col/col1229213975/index.html" target="_blank" rel="noreferrer">Huzhou official website ↗</a></article>
+            <article class="press-card"><div class="press-meta"><span>July 2026 · Education</span><span>One family’s moment</span></div><h4>Undergraduate Admission Notices Start Delivery across Huzhou</h4><p>A courier’s route leads to one family’s long-awaited Tsinghua envelope, arriving on a student’s eighteenth birthday.</p><a class="read" href="https://www.huzhou.gov.cn/col/col1229213975/index.html" target="_blank" rel="noreferrer">Huzhou official website ↗</a></article>
+            <article class="press-card"><div class="press-meta"><span>October 2026 · Culture</span><span>Two places, one stage</span></div><h4>Taihu Breeze Blows, the Camel City Blooms</h4><p>A cultural exchange performance in Keping brings Jiangnan tea-picking dance into conversation with Qiuci rhythms.</p><a class="read" href="https://www.huzhou.gov.cn/col/col1229213975/index.html" target="_blank" rel="noreferrer">Huzhou official website ↗</a></article>
+          </div>
+        </div>
+        <div class="pressroom reveal campus-copydesk">
+          <div class="pressroom-head"><h3>Huzhou Normal University · selected campus news</h3><a href="https://english.huznu.edu.cn/" target="_blank" rel="noreferrer">Official English news site ↗</a></div>
+          <p class="press-intro">Campus reporting and research news, linked to the university’s published English originals.</p>
+          <div class="press-grid campus-stories">
+            <a class="press-card campus-story" href="https://english.huznu.edu.cn/2026/0911/c5123a254935/page.htm" data-zh-href="https://www.huznu.edu.cn/2026/0829/c64a254520/page.htm" target="_blank" rel="noreferrer"><img src="images/huznu-science-baryon.png" alt="Official HUZNU image accompanying the university’s Science research story"><div class="press-meta"><span>Aug 2026 · Science</span><span>Official HUZNU page ↗</span></div><h4>HUZNU Faculty Member Contributes to Study Published in Science</h4><p>A campus research report on nuclear physics and international collaboration.</p></a>
+            <a class="press-card campus-story" href="https://english.huznu.edu.cn/2026/1027/c5123a257200/page.htm" data-zh-href="https://www.huznu.edu.cn/2026/0929/c64a256182/page.htm" target="_blank" rel="noreferrer"><img src="images/huznu-agriculture-grafting.png" alt="Official HUZNU image accompanying the agricultural technology research story"><div class="press-meta"><span>Sep 2026 · Agriculture</span><span>Official HUZNU page ↗</span></div><h4>HUZNU Young Faculty Member Publishes Study in Computers and Electronics in Agriculture</h4><p>A readable account of a machine-vision method for locating grafting cut points.</p></a>
+            <a class="press-card campus-story" href="https://english.huznu.edu.cn/2026/1027/c5123a257202/page.htm" data-zh-href="https://www.huznu.edu.cn/2026/1009/c64a256365/page.htm" target="_blank" rel="noreferrer"><img src="images/huznu-nature-hydrogel.png" alt="Official HUZNU image accompanying the Nature Communications research story"><div class="press-meta"><span>Sep 2026 · Nature Communications</span><span>Official HUZNU page ↗</span></div><h4>HUZNU Faculty Member Publishes New Study in Nature Communications</h4><p>A campus story explaining a chlorophyll-based hydrogel for cardiac repair.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research" data-chapter="02"><span class="meteor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#4c91ad"></span> 02 / Research · A question from the classroom</div><h2>When a voice<br>becomes a lesson.</h2></div><p class="section-note">A classroom question, explored with English education majors and voice-interactive AI.</p></div>
+        <div class="research-grid">
+          <article class="research-main reveal">
+            <div class="research-label">Classroom inquiry · Published 2026</div>
+            <h3>Action Research on Voice-Interactive AI in Instructional Practice Training for English Education Majors</h3>
+            <p>This study explored how voice-interactive AI might support lesson planning and reflective practice in English teacher training — and where real classroom experience remains essential.</p>
+            <div class="journal-line"><span>US-China Education Review A · 16(3) · 115–128 · 2026</span><a href="https://www.davidpublisher.com/index.php/Home/Article/index?id=53382.html" target="_blank" rel="noreferrer">Read the paper ↗</a></div>
+            <div class="research-stamp">VOICE<br>TO<br>CLASSROOM</div>
+          </article>
+          <div class="research-side">
+            <figure class="research-photo reveal"><img src="images/research-team.jpg" alt="Shi Qingying with the research team"><figcaption>Building the question together</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competitions" data-chapter="03"><span class="meteor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> 03 / Competitions · Practice under pressure</div><h2>Play the room.<br>Find the line.</h2></div><p class="section-note">Reading, speaking, planning and debate: each contest trained a different part of how I build and share a story.</p></div>
+        <div class="debate-strip reveal">
+          <div><div class="eyebrow" style="color:#ddd3c8"><span class="dot" style="background:var(--yellow)"></span> Debate · First on the bill</div><h3>Arguments with a pulse.</h3><p>Multiple roles, one team, and a room full of questions.</p></div>
+          <div class="debate-award"><span>National Final · Bronze · 2026</span><span>East China Regional · Gold · 2025</span><span>East China Regional · Bronze · 2025</span><span>Campus Champion · 2025</span></div>
+        </div>
+        <div class="competition-wall">
+          <article class="competition-card reveal"><div class="level">National · Reading</div><h3>First Prize</h3><p>3rd China–Foreign Communication Cup National English Reading Competition for College Students</p><span class="year">2025</span></article>
+          <article class="competition-card reveal delay-1"><div class="level">National · Translation</div><h3>Third Prize</h3><p>FLTRP · ETIC Cup · Understanding Contemporary China National Foreign Language Contest</p><span class="year">2025</span></article>
+          <article class="competition-card reveal delay-2"><div class="level">Zhejiang · Reading & Writing</div><h3>Silver Award</h3><p>FLTRP · ETIC Cup · Understanding Contemporary China Zhejiang Provincial Contest</p><span class="year">2025</span></article>
+          <article class="competition-card reveal delay-1"><div class="level">Zhejiang · C–E Translation</div><h3>Third Prize</h3><p>11th Zhejiang Provincial Translation Competition · Undergraduate Group</p><span class="year">2026</span></article>
+          <article class="competition-card reveal delay-2"><div class="level">Campus · Interpreting</div><h3>First Prize</h3><p>FLTRP · ETIC Cup English Interpreting Competition · Campus round</p><span class="year">2024–2025</span></article>
+          <article class="competition-card reveal"><div class="level">Campus · Translation</div><h3>Gold Award</h3><p>FLTRP · ETIC Cup English Translation Competition · Campus round</p><span class="year">2025</span></article>
+        </div>
+        <div class="competition-video reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> Competition · Speaking</div><h3>A voice, in the room.</h3><p>A short excerpt from the speech competition, presented as a representative moment after the awards.</p></div><video controls preload="metadata" playsinline><source src="images/speaking-competition-clip.mov" type="video/quicktime">Your browser does not support this video.</video></div>
+      </div>
+    </section>
+
+    <section class="section" id="global" data-chapter="04"><span class="meteor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#82a88b"></span> 04 / Global experiences · Across borders</div><h2>Language grows<br>between people.</h2></div><p class="section-note">Language became real to me in the in-between moments: at a welcome desk, beside a guest, and in the questions after a talk.</p></div>
+        <div class="global-grid">
+          <article class="passport reveal"><img src="images/ucl-presentation.jpg" alt="Shi Qingying presenting during the UCL Institute of Education winter programme"><div class="passport-copy"><div class="passport-date">Jan — Feb 2025 · London</div><h3>UCL Institute of Education</h3><div class="place">Winter Academic Programme · Education</div><p>Explored EAP, UCL academic culture, early years and primary education, TESOL, and educational psychology.</p></div></article>
+          <article class="passport reveal delay-1"><img src="images/green-low-carbon-interpreting.jpg" alt="Shi Qingying with Erik Solheim at the Green Low-Carbon Innovation Conference"><div class="passport-copy"><div class="passport-date">Aug 2025 · Huzhou</div><h3>Green Low-Carbon Innovation Conference</h3><div class="place">Liaison interpreting volunteer</div><p>Supported the visit of Erik Solheim, former UN Under-Secretary-General, with interpretation and guest coordination around the conference and sustainability seminar.</p></div></article>
+          <article class="passport reveal"><img src="images/stem-educators-forum.jpg" alt="Translation support at the China-Africa STEM Educators forum"><div class="passport-copy"><div class="passport-date">Oct 2025 · Huzhou</div><h3>China–Africa STEM Educators Programme</h3><div class="place">Lead volunteer · “Huzhou Wisdom in STEM Education Practices” Forum</div><p>Coordinated language volunteers and presented two student projects — the Beidou-guided warm-current life jacket and “Winter Armour” — to overseas educators. A conversation with a Kenyan participant also opened the programme’s only business-cooperation opportunity.</p></div></article>
+          <article class="passport reveal delay-1"><img src="images/azerbaijan-student-camp.jpg" alt="Cultural exchange with students from Azerbaijan University of Languages"><div class="passport-copy"><div class="passport-date">Jul 2025 · Huzhou</div><h3>Azerbaijan Student Summer Camp</h3><div class="place">Liaison interpreting volunteer</div><p>Supported students from the Confucius Institute at Azerbaijan University of Languages through arrival, campus activities and cultural visits.</p></div></article>
+          <article class="passport reveal"><img src="images/un-china-study-programme.jpg" alt="The UN China Study Programme visit to Lougang in Huzhou"><div class="passport-copy"><div class="passport-date">Jul 26–27, 2024 · Huzhou</div><h3>UN China Study Programme</h3><div class="place">Lougang tour · Accompanying interpreter</div><p>Accompanied UN officials on a Lougang visit and helped the group exchange ideas on site.</p></div></article>
+          <article class="passport reveal delay-1"><img src="images/international-thinktank-forum.jpg" alt="At the 3rd International Think Tank Forum in Huzhou"><div class="passport-copy"><div class="passport-date">Jun 2024 · Huzhou</div><h3>International Think Tank Forum</h3><div class="place">Volunteer · Western Returned Scholars Association</div><p>Supported the 3rd International Think Tank Forum, helping conversations across research, policy and international exchange run smoothly.</p></div></article>
+          <article class="passport reveal"><img src="images/sino-french-football.jpg" alt="Organizing the 2024 Sino-French football match"><div class="passport-copy"><div class="passport-date">Apr 2024 · Huzhou</div><h3>Sino-French Football Match</h3><div class="place">Student organizer</div><p>Helped organize, prepare and supervise the event, bringing local students and visiting players together through sport.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="honors" data-chapter="05"><span class="meteor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#c295bd"></span> 05 / Honors & awards · Proof in the work</div><h2>Milestones,<br>kept close.</h2></div><p class="section-note">Ordered as requested. Open a certificate to see its full scan. Each row holds three recognitions.</p></div>
+        <div class="honor-collage">
+          <article class="honor-card reveal"><a href="images/award-national-scholarship.jpg" target="_blank" rel="noreferrer"><img src="images/award-national-scholarship.jpg" alt="China National Scholarship certificate, 2024–2025"><div class="caption">China National Scholarship</div><div class="subcaption">2024–2025 · National</div></a></article>
+          <article class="honor-card reveal delay-1"><a href="images/award-top-ten-students.jpg" target="_blank" rel="noreferrer"><img src="images/award-top-ten-students.jpg" alt="Top Ten Students certificate from Huzhou Normal University"><div class="caption">Top Ten Students</div><div class="subcaption">Huzhou Normal University · 2026</div></a></article>
+          <article class="honor-card reveal delay-2"><a href="images/award-presidents-scholarship.png" target="_blank" rel="noreferrer"><img src="images/award-presidents-scholarship.png" alt="President’s Scholarship certificate, 2025–2026"><div class="caption">President’s Scholarship</div><div class="subcaption">2025–2026 · Huzhou Normal University</div></a></article>
+          <article class="honor-card reveal"><a href="images/award-may-fourth-youth-medal.jpg" target="_blank" rel="noreferrer"><img src="images/award-may-fourth-youth-medal.jpg" alt="Huzhou Normal University May Fourth Youth Medal certificate"><div class="caption">May Fourth Youth Medal</div><div class="subcaption">Huzhou Normal University · 2025</div></a></article>
+          <article class="honor-card reveal delay-1"><a href="images/award-national-debate-bronze.jpg" target="_blank" rel="noreferrer"><img src="images/award-national-debate-bronze.jpg" alt="National Final Bronze Award certificate in the FLTRP ETIC Cup National English Debating Competition"><div class="caption">National English Debate</div><div class="subcaption">National Final · Bronze · 2026</div></a></article>
+          <article class="honor-card reveal delay-2"><a href="images/award-huzhou-outstanding-volunteer.jpg" target="_blank" rel="noreferrer"><img src="images/award-huzhou-outstanding-volunteer.jpg" alt="Outstanding Volunteer certificate from Huzhou City"><div class="caption">Outstanding Volunteer</div><div class="subcaption">Huzhou City · 2025</div></a></article>
+          <article class="honor-card reveal"><a href="images/award-zhejiang-reading-silver.jpg" target="_blank" rel="noreferrer"><img src="images/award-zhejiang-reading-silver.jpg" alt="Zhejiang Silver Award certificate for FLTRP ETIC Cup reading and writing"><div class="caption">Reading & Writing · Silver</div><div class="subcaption">Zhejiang Provincial Contest · 2025</div></a></article>
+          <article class="honor-card reveal delay-1"><a href="images/award-national-reading-first.png" target="_blank" rel="noreferrer"><img src="images/award-national-reading-first.png" alt="First Prize certificate in China–Foreign Communication Cup National English Reading Competition"><div class="caption">China–Foreign Communication Cup</div><div class="subcaption">National English Reading · First Prize · 2025</div></a></article>
+          <article class="honor-card reveal delay-2"><div class="award-pair"><a href="images/award-special-scholarship-2024-2025.jpg" target="_blank" rel="noreferrer"><img src="images/award-special-scholarship-2024-2025.jpg" alt="Special Scholarship certificate, 2024–2025"></a><a href="images/award-special-scholarship-2025-2026.png" target="_blank" rel="noreferrer"><img src="images/award-special-scholarship-2025-2026.png" alt="Special Scholarship certificate, 2025–2026"></a></div><div class="caption">Special Scholarship</div><div class="subcaption">Two consecutive years · Huzhou Normal University</div></article>
+          <article class="honor-card reveal delay-1"><a href="images/award-national-translation-third.png" target="_blank" rel="noreferrer"><img src="images/award-national-translation-third.png" alt="National Third Prize in the FLTRP ETIC Cup English translation category"><div class="caption">FLTRP ETIC Cup · Translation</div><div class="subcaption">National Third Prize · 2025</div></a></article>
+          <article class="honor-card reveal delay-2"><a href="images/award-zhejiang-translation-third.jpg" target="_blank" rel="noreferrer"><img src="images/award-zhejiang-translation-third.jpg" alt="Third Prize certificate in the 11th Zhejiang Provincial Translation Competition"><div class="caption">Zhejiang Translation</div><div class="subcaption">C–E · Third Prize · 2026</div></a></article>
+          <article class="honor-card reveal"><a href="images/award-paro-cecep-competition.jpg" target="_blank" rel="noreferrer"><img src="images/award-paro-cecep-competition.jpg" alt="Paro–CECEP Scholarship Competition Award certificate, 2025"><div class="caption">Paro–CECEP Scholarship</div><div class="subcaption">Competition Award · 2025</div></a></article>
           <article class="honor-card reveal delay-1"><a href="images/award-provincial-short-video-bronze.jpg" target="_blank" rel="noreferrer"><img src="images/award-provincial-short-video-bronze.jpg" alt="Provincial Bronze certificate in the FLTRP ETIC Cup English short video contest"><div class="caption">English Short Video · Bronze</div><div class="subcaption">Zhejiang Provincial Contest · 2024</div></a></article>
           <article class="honor-card reveal delay-2"><div class="award-pair"><a href="images/award-outstanding-student-2023-2024.jpg" target="_blank" rel="noreferrer"><img src="images/award-outstanding-student-2023-2024.jpg" alt="Outstanding Student certificate, 2023–2024"></a><a href="images/award-outstanding-student-2024-2025.jpg" target="_blank" rel="noreferrer"><img src="images/award-outstanding-student-2024-2025.jpg" alt="Outstanding Student certificate, 2024–2025"></a></div><div class="caption">Outstanding Student</div><div class="subcaption">2023–2024 & 2024–2025</div></article>
           <article class="honor-card reveal"><a href="images/award-advanced-innovation-entrepreneurship-2024-2025.jpg" target="_blank" rel="noreferrer"><img src="images/award-advanced-innovation-entrepreneurship-2024-2025.jpg" alt="Advanced Individual in Innovation and Entrepreneurship certificate, 2024–2025"><div class="caption">Advanced Individual</div><div class="subcaption">Innovation & Entrepreneurship · 2024–2025</div></a></article>
@@ -428,7 +685,7 @@ Total output lines: 773
         '.nav > a':['经历','研究','竞赛','全球交流','荣誉','生活','联系'],
         '.hero-kicker':['<span class="spark">✳</span> 新闻与传播方向 · 先走近，再落笔'],
         '.hero-copy h1':['<span>施</span><span class="surname">青莹</span>'],
-        '.hero-motto':['向未知垂眸　载热忱漫游'],
+        '.hero-motto':['向未知垂眸，载热忱漫游'],
         '.hero-lede':['从一条新闻背后的人和事出发，我喜欢查资料、听讲述、追问来处，再把值得记下的部分写清楚。'],
         '.hero-actions .button':['看看我做过的事 <span aria-hidden="true">↘</span>','写信给我 <span aria-hidden="true">↗</span>'],
         '.hero-meta .scribble':['最近总在追问：然后呢？'],
@@ -454,12 +711,12 @@ Total output lines: 773
         '.research-main h3':['<span>Action Research on Voice-Interactive AI in Instructional Practice Training for English Education Majors</span><small class="title-translation">语音交互AI辅助英语师范生教学实践训练行动研究</small>'],
         '.research-main p':['这项研究关注语音交互AI如何融入英语师范生的教学实践训练，也留意技术反馈与真实课堂经验各自能发挥什么作用。'],
         '.details-body':['<ul><li>报道涵盖公共事务、城市生活、文化、体育与地方发展。</li><li>对照中文原稿校订 AI 初稿，核对事实、人名职务、术语和上下文，补足遗漏。</li><li>再推敲标题、导语与句式，让英文读者读得明白，信息也不走样。</li></ul>','<p>我独立翻译了湖州师范大学与阿塞拜疆国立经济大学共建国际中文教育硕士专业实践基地的协议，英文稿获校方采纳。</p><p><em>国际中文教育硕士专业实践基地共建协议</em></p>','<p>选题涵盖消费、绿色转型、中医药与国际关系等主题。反复修改让我更在意事实是否准确、逻辑是否顺畅、表达是否贴合读者。</p>','<p>2025 年 5 月 24 日，我还参加了爱山长溪小学的中外双师课堂，在真实教学中协助课堂交流。</p>','<p>为期 28 天的四轮实践采用教学视频、反思日志、问卷与访谈，记录学生在备课、模拟授课和课后反思中的体验。</p>'],
-        '.passport-copy h3':['<span>UCL Institute of Education</span><small class="title-translation">伦敦大学学院教育学院</small>','<span>Green Low-Carbon Innovation Conference</span><small class="title-translation">绿色低碳创新大会</small>','<span>China–Africa STEM Educators Programme</span><small class="title-translation">中非 STEM 教育工作者项目</small>','<span>Azerbaijan Student Summer Camp</span><small class="title-translation">阿塞拜疆学生夏令营</small>','<span>UN China Study Programme</span><small class="title-translation">联合国中国研修项目</small>','<span>International Think Tank Forum</span><small class="title-translation">国际智库论坛</small>','<span>Sino-French Football Match</span><small class="title-translation">中法足球友谊赛</small>'],
-        '.passport-copy .place':['UCL 冬季学术项目 · 教育专题','语言支持志愿者','中非 STEM 教育工作者论坛 · 湖州智慧 STEM 教育实践','语言支持志愿者','潞村参访 · 陪同交流','欧美同学会 · 志愿服务','学生组织者'],
+        '.passport-copy h3':['<span>UCL Institute of Education</span><small class="title-translation">伦敦大学学院教育学院</small>','<span>Green Low-Carbon Innovation Conference</span><small class="title-translation">绿色低碳创新大会</small>','<span>China–Africa STEM Educators Programme</span><small class="title-translation">教育部中非 STEM 论坛</small>','<span>Azerbaijan Student Summer Camp</span><small class="title-translation">阿塞拜疆学生夏令营</small>','<span>UN China Study Programme</span><small class="title-translation">联合国中国研修项目</small>','<span>International Think Tank Forum</span><small class="title-translation">国际智库论坛</small>','<span>Sino-French Football Match</span><small class="title-translation">中法足球友谊赛</small>'],
+        '.passport-copy .place':['UCL 访学','陪同口译','论坛现场 · 湖州智慧 STEM 教育实践','陪同口译','潞村参访 · 陪同交流','欧美同学会 · 志愿服务','学生组织者'],
         '.passport-copy p':['项目期间接触了学术英语、UCL 学术文化、幼儿与小学教育、TESOL 和教育心理学。','协助接待来访的 Erik Solheim（联合国前副秘书长），并参与大会及可持续发展研讨活动中的嘉宾协调。','协调语言志愿者，向海外教育工作者介绍北斗暖流救生衣与“寒冬战袍”两个学生项目。与一位肯尼亚来宾交流后，团队也迎来了项目中唯一一次商务合作机会。','协助接待阿塞拜疆语言大学孔子学院学生，陪同参与校园活动与文化参访。','陪同联合国官员参观湖州，协助沿途沟通与现场交流。','支持第三届国际智库论坛，协助现场沟通与嘉宾交流。','参与活动筹备与现场组织，让本地学生和来访球员因足球相聚。'],
         '.honor-card .caption':['国家奖学金','十佳大学生','校长奖学金','青年五四奖章','全国大学生英语辩论赛','优秀志愿者','浙江省读写赛道银奖','中外传播杯全国英语阅读竞赛','特等奖学金','外研社·国才杯全国英语翻译赛','浙江省翻译大赛','帕罗·中电竞赛奖助学金','英语短视频赛道铜奖','优秀学生','创新创业先进个人'],
         '.honor-card .subcaption':['2024–2025 · 国家级','湖州师范大学 · 2026','2025–2026 · 湖州师范大学','湖州师范大学 · 2025','全国总决赛 · 铜奖 · 2026','湖州市 · 2025','浙江省赛 · 2025','全国赛 · 一等奖 · 2025','连续两年 · 湖州师范大学','全国三等奖 · 2025','汉译英 · 三等奖 · 2026','竞赛奖 · 2025','浙江省赛 · 2024','2023–2024 与 2024–2025','创新创业 · 2024–2025'],
-        '.tag':['湖州师范大学 · 二等奖学金 · 2023–2024','湖州师范大学 · 优秀志愿者 · 2023','第二十三期团校 · 优秀学员 · 2024','优秀团干部 · 2023','优秀教学信息员 · 2024','校级读写赛道 · 二等奖 · 2024','外研社·国才杯综合技能赛 · 二等奖 · 2024','外研社·国才杯英语演讲初赛 · 特等奖 · 2024','外研社·国才杯英语演讲校级决赛 · 一等奖 · 2025','湖州师范大学演讲决赛 · 二等奖 · 2024','外文书法大赛 · 一等奖 · 2024','校级短视频比赛 · 三等奖 · 2024','大学生职业规划大赛成长赛道 · 二等奖 · 2025','全国大学生英语词汇竞赛英语专业组 · 三等奖 · 2025','校级读写赛道 · 特等奖 · 2025','文体活动先进个人 · 2024–2025','优秀团干部 · 2024','最美志愿者 · 湖州师范大学 · 2024 与 2025','暑期社会实践先进个人 · 2026','外研社英语演讲夏令营 · 结业证明 · 2024'],
+        '.tag':['湖州师范大学 · 二等奖学金 · 2023–2024','湖州师范大学 · 优秀志愿者 · 2023','第二十三期团校 · 优秀学员 · 2024','优秀团干部 · 2023','优秀教学信息员 · 2024','校级读写赛道 · 二等奖 · 2024','外研社·国才杯综合技能赛 · 二等奖 · 2024','外研社·国才杯英语演讲初赛 · 特等奖 · 2024','外研社·国才杯英语演讲校级决赛 · 一等奖 · 2025','湖州师范大学演讲决赛 · 二等奖 · 2024','外文书法大赛 · 一等奖 · 2024','校级短视频比赛 · 三等奖 · 2024','大学生职业规划大赛成长赛道 · 二等奖 · 2025','全国大学生英语词汇竞赛英语专业组 · 三等奖 · 2025','校级读写赛道 · 特等奖 · 2025','文体活动先进个人 · 2024–2025','优秀团干部 · 2024','最美志愿者 · 湖州师范大学 · 2024、2025','暑期社会实践先进个人 · 2026','外研社英语演讲夏令营 · 结业证明 · 2024'],
         '.journal-line span':['《中美教育评论 A》· 第 16 卷第 3 期 · 115–128 页 · 2026'],
         '.journal-line a':['阅读论文 ↗'],
         '.debate-strip .eyebrow':['辩论 · 有交锋，也有倾听'],
@@ -515,20 +772,66 @@ Total output lines: 773
     const storedLanguage=localStorage.getItem('sq-language');if(storedLanguage&&['en','zh-Hans','zh-Hant'].includes(storedLanguage)){setLanguage(storedLanguage);updateLocalizedLinks(storedLanguage);}
   </script>
 
+  <aside class="idle-kitten" id="idleKitten" data-state="hidden" aria-hidden="true" title="A little visitor from Pexels">
+    <img class="cat-photo cat-grooming" src="https://images.pexels.com/videos/16266726/cat-vertical-shot-vertical-video-16266726.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" referrerpolicy="no-referrer">
+    <img class="cat-photo cat-sleeping" src="https://images.pexels.com/videos/31032885/4k-video-4k-video-copyright-free-active-pet-alley-cat-31032885.jpeg?auto=compress&amp;cs=tinysrgb&amp;fm=jpg&amp;w=600" alt="" loading="lazy" referrerpolicy="no-referrer">
+    <span class="kitten-snore">z z z</span>
+  </aside>
+
   <script>
-    let lastActiveSection='';
-    const meteorObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-      if(!entry.isIntersecting)return;
-      if(lastActiveSection!==entry.target.id){
-        lastActiveSection=entry.target.id;
-        entry.target.classList.remove('meteor-flash');
-        void entry.target.offsetWidth;
-        entry.target.classList.add('meteor-flash');
-        setTimeout(()=>entry.target.classList.remove('meteor-flash'),1400);
+    const kitten=document.getElementById('idleKitten');
+    const dwellTimers=[];
+    const meteorTimes=new Map();
+    let activeSectionId='';
+    let dwellSectionId='';
+    function clearDwellTimers(){while(dwellTimers.length)clearTimeout(dwellTimers.pop());}
+    function setKittenState(state){if(kitten)kitten.dataset.state=state;}
+    function startDwell(sectionId){
+      clearDwellTimers();
+      dwellSectionId=sectionId||'';
+      setKittenState('hidden');
+      if(!dwellSectionId||document.hidden)return;
+      dwellTimers.push(setTimeout(()=>{if(dwellSectionId===sectionId)setKittenState('grooming');},3000));
+      dwellTimers.push(setTimeout(()=>{if(dwellSectionId===sectionId)setKittenState('sleeping');},7000));
+      dwellTimers.push(setTimeout(()=>{if(dwellSectionId===sectionId)setKittenState('snoring');},10000));
+    }
+    function flashMeteor(section){
+      if(!section)return;
+      const meteor=section.querySelector('.meteor');
+      if(!meteor)return;
+      meteorTimes.set(section.id,Date.now());
+      section.classList.remove('meteor-flash');
+      void section.offsetWidth;
+      section.classList.add('meteor-flash');
+      setTimeout(()=>section.classList.remove('meteor-flash'),1450);
+    }
+    document.querySelectorAll('.nav a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{
+      const target=document.querySelector(link.getAttribute('href'));
+      if(!target)return;
+      flashMeteor(target);
+      if(target.id===activeSectionId)startDwell(target.id);
+      else startDwell('');
+    }));
+    const chapterObserver=new IntersectionObserver(entries=>{
+      const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(visible){
+        const section=visible.target;
+        if(activeSectionId!==section.id){
+          activeSectionId=section.id;
+          if(Date.now()-(meteorTimes.get(section.id)||0)>1500)flashMeteor(section);
+          startDwell(section.id);
+        }
+        if(section.id==='contact')document.getElementById('contactScene')?.classList.add('started');
+      }else if(entries.some(entry=>entry.target.id===activeSectionId&&!entry.isIntersecting)){
+        activeSectionId='';
+        startDwell('');
       }
-      if(entry.target.id==='contact')document.getElementById('contactScene')?.classList.add('started');
-    }),{rootMargin:'-28% 0px -62% 0px'});
-    document.querySelectorAll('main section[id]').forEach(section=>meteorObserver.observe(section));
+    },{rootMargin:'-28% 0px -62% 0px',threshold:[0,.15,.35,.6]});
+    document.querySelectorAll('main section[id]').forEach(section=>chapterObserver.observe(section));
+    document.addEventListener('visibilitychange',()=>{
+      if(document.hidden)startDwell('');
+      else if(activeSectionId)startDwell(activeSectionId);
+    });
   </script>
 
 </body>
