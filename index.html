@@ -378,7 +378,7 @@
     .idle-kitten{position:fixed;right:clamp(12px,2vw,32px);bottom:18px;z-index:24;width:126px;height:158px;margin:0;padding:6px;background:#fffaf2;border:1px solid rgba(79,67,53,.12);border-radius:48% 48% 12px 12px;box-shadow:0 12px 28px rgba(63,47,31,.2);opacity:0;visibility:hidden;transform:translateY(14px) rotate(2deg) scale(.96);transition:opacity .42s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility .42s;pointer-events:none;overflow:visible}
     .idle-kitten::before{content:"";position:absolute;z-index:2;top:-7px;left:37px;width:52px;height:15px;background:rgba(120,169,200,.78);clip-path:polygon(0 7%,100% 0,96% 90%,4% 100%);transform:rotate(-4deg)}
     .idle-kitten[data-state="grooming"],.idle-kitten[data-state="sleeping"],.idle-kitten[data-state="snoring"]{opacity:1;visibility:visible;transform:translateY(0) rotate(-1.2deg) scale(1)}
-    .idle-kitten .cat-photo{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:cover;border-radius:43% 43% 8px 8px;transition:opacity .55s ease;box-shadow:0 2px 8px rgba(37,34,31,.12)}
+    .idle-kitten .cat-video{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:cover;border-radius:43% 43% 8px 8px;transition:opacity .55s ease;box-shadow:0 2px 8px rgba(37,34,31,.12)}
     .idle-kitten .cat-grooming{object-position:center 45%;opacity:1}
     .idle-kitten .cat-sleeping{object-position:31% center;opacity:0}
     .idle-kitten[data-state="grooming"] .cat-grooming{animation:kittenGroom 1.2s ease-in-out infinite;transform-origin:56% 46%}
@@ -390,7 +390,7 @@
     @keyframes kittenSleep{0%,100%{transform:scale(1)}50%{transform:scale(1.024)}}
     @keyframes snoreFloat{0%,100%{transform:translateY(8px) rotate(-7deg);opacity:.52}50%{transform:translateY(-5px) rotate(-2deg);opacity:.95}}
     @media(max-width:680px){.idle-kitten{width:98px;height:126px;right:10px;bottom:12px}.idle-kitten::before{left:29px;width:40px;height:13px}.kitten-snore{right:-12px;font-size:.92rem}}
-    @media(prefers-reduced-motion:reduce){.idle-kitten,.idle-kitten .cat-photo,.kitten-snore{animation:none!important;transition:none!important}}
+    @media(prefers-reduced-motion:reduce){.idle-kitten,.idle-kitten .cat-video,.kitten-snore{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
@@ -773,8 +773,8 @@
   </script>
 
   <aside class="idle-kitten" id="idleKitten" data-state="hidden" aria-hidden="true" title="A little visitor from Pexels">
-    <img class="cat-photo cat-grooming" src="https://images.pexels.com/videos/16266726/cat-vertical-shot-vertical-video-16266726.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" referrerpolicy="no-referrer">
-    <img class="cat-photo cat-sleeping" src="https://images.pexels.com/videos/31032885/4k-video-4k-video-copyright-free-active-pet-alley-cat-31032885.jpeg?auto=compress&amp;cs=tinysrgb&amp;fm=jpg&amp;w=600" alt="" loading="lazy" referrerpolicy="no-referrer">
+    <video class="cat-video cat-grooming" muted playsinline loop preload="none" poster="https://images.pexels.com/videos/16266726/cat-vertical-shot-vertical-video-16266726.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260"><source src="https://videos.pexels.com/video-files/16266726/16266726-hd_1080_1920_30fps.mp4" type="video/mp4"></video>
+    <video class="cat-video cat-sleeping" muted playsinline loop preload="none" poster="https://images.pexels.com/videos/31032885/4k-video-4k-video-copyright-free-active-pet-alley-cat-31032885.jpeg?auto=compress&amp;cs=tinysrgb&amp;fm=jpg&amp;w=600"><source src="https://videos.pexels.com/video-files/31032885/13263573_1920_1080_25fps.mp4" type="video/mp4"></video>
     <span class="kitten-snore">z z z</span>
   </aside>
 
@@ -785,7 +785,32 @@
     let activeSectionId='';
     let dwellSectionId='';
     function clearDwellTimers(){while(dwellTimers.length)clearTimeout(dwellTimers.pop());}
-    function setKittenState(state){if(kitten)kitten.dataset.state=state;}
+    function setKittenState(state){
+      if(!kitten)return;
+      const previous=kitten.dataset.state;
+      const grooming=kitten.querySelector('.cat-grooming');
+      const sleeping=kitten.querySelector('.cat-sleeping');
+      const motionAllowed=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      kitten.dataset.state=state;
+      const playFromStart=video=>{
+        video.pause();
+        try{video.currentTime=0;}catch{}
+        if(motionAllowed)video.play()?.catch(()=>{});
+      };
+      if(state==='grooming'){
+        sleeping.pause();
+        if(previous!=='grooming')playFromStart(grooming);
+      }else if(state==='sleeping'){
+        grooming.pause();
+        if(previous!=='sleeping'&&previous!=='snoring')playFromStart(sleeping);
+      }else if(state==='snoring'){
+        grooming.pause();
+        if(previous!=='sleeping'&&previous!=='snoring')playFromStart(sleeping);
+      }else{
+        grooming.pause();
+        sleeping.pause();
+      }
+    }
     function startDwell(sectionId){
       clearDwellTimers();
       dwellSectionId=sectionId||'';
