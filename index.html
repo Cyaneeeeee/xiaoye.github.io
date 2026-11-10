@@ -939,7 +939,8 @@
       const bounds=letters.getBoundingClientRect();
       const size=innerWidth<=680?56:70;
       const line=document.documentElement.lang==='en'?anchor.getBoundingClientRect():name.getBoundingClientRect();
-      nameKitten.style.left=Math.min(innerWidth-size-12,Math.max(12,bounds.right+8))+'px';
+      const entranceShift=new DOMMatrixReadOnly(getComputedStyle(anchor).transform).m41;
+      nameKitten.style.left=Math.min(innerWidth-size-12,Math.max(12,bounds.right-entranceShift+8))+'px';
       nameKitten.style.top=Math.max(82,Math.min(innerHeight-size-12,line.bottom-size-5))+'px';
       void nameKitten.offsetWidth;
       nameKitten.classList.add('is-waving');
