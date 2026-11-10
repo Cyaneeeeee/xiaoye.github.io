@@ -6,6 +6,13 @@
   <meta name="theme-color" content="#f6efe4">
   <meta name="description" content="Shi Qingying — a storyteller and student communicator from Huzhou, China, drawn to people, place and public life.">
   <title>Shi Qingying — Stay Curious, Stay Passionate</title>
+  <script>
+    // Start before first paint; the paper always clears even if later scripts fail.
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches && (!location.hash || location.hash==='#top')){
+      document.documentElement.classList.add('intro-pending');
+      setTimeout(()=>document.documentElement.classList.remove('intro-pending'),6500);
+    }
+  </script>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
   <style>
@@ -370,10 +377,10 @@
 
     html[lang^="zh"] .hero-copy h1{white-space:nowrap}
     html[lang^="zh"] .hero-copy h1>span{display:inline-block}
-    html[lang^="zh"] .hero-motto{font-size:clamp(1.15rem,2.5vw,2.1rem);white-space:nowrap;margin-left:clamp(22px,3vw,36px);transform:translateX(16px) rotate(-2deg);transform-origin:left}
+    html[lang^="zh"] .hero-motto{font-size:clamp(1.15rem,2.5vw,2.1rem);white-space:nowrap;margin-left:clamp(22px,3vw,36px);transform:translateX(22px) rotate(-2deg);transform-origin:left}
     html[lang^="zh"] .section-head h2,html[lang^="zh"] .passport-copy h3,html[lang^="zh"] .press-card h4,html[lang^="zh"] .life-intro h3,html[lang^="zh"] .life-video-card h3,html[lang^="zh"] .competition-video h3{line-height:1.18}
     html[lang^="zh"] .research-main h3{line-height:1.2}
-    @media(max-width:680px){html[lang^="zh"] .hero-motto{font-size:clamp(1rem,5.6vw,1.5rem);margin-left:16px;transform:translateX(12px) rotate(-2deg)}}
+    @media(max-width:680px){html[lang^="zh"] .hero-motto{font-size:clamp(1rem,5.6vw,1.5rem);margin-left:16px;transform:translateX(16px) rotate(-2deg)}}
 
     .idle-kitten{position:fixed;right:14px;bottom:16px;z-index:24;width:70px;height:70px;margin:0;opacity:0;visibility:hidden;transform:translateY(8px) scale(.82);transition:opacity .3s ease,transform .38s cubic-bezier(.2,.8,.2,1),visibility .3s;pointer-events:none;filter:drop-shadow(1px 3px 1px rgba(63,47,31,.18))}
     .idle-kitten[data-state="grooming"],.idle-kitten[data-state="sleeping"],.idle-kitten[data-state="snoring"]{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
@@ -394,12 +401,99 @@
     @keyframes snoreFloat{0%,100%{transform:translateY(4px) rotate(-7deg);opacity:.52}50%{transform:translateY(-4px) rotate(-2deg);opacity:.95}}
     @media(max-width:680px){.idle-kitten{width:56px;height:56px;right:8px;bottom:10px}.kitten-snore{right:-7px;font-size:.68rem}}
     @media(prefers-reduced-motion:reduce){.idle-kitten,.pixel-cat *,.kitten-snore{animation:none!important;transition:none!important}}
+
+    /* A small paper theatre, in the site's existing ink and sun-washed colours. */
+    html[lang="en"] .hero-motto{line-height:1.22}
+    html[lang="en"] .hero-motto .motto-line{display:block;white-space:nowrap}
+    html[lang="en"] .hero-motto .motto-line+ .motto-line{margin-left:.75em}
+    .hero-name-shell{position:relative}
+    .hero-name-shell h1>span:first-child{text-shadow:1px 1px 0 #bcb2a5,2px 2px 0 #bcb2a5,3px 3px 0 rgba(97,78,58,.19),5px 7px 7px rgba(73,56,39,.10)}
+    .hero-name-shell h1>.surname{text-shadow:1px 1px 0 #f2cf58,2px 2px 0 #f2cf58,3px 3px 0 #dca94b,4px 4px 0 rgba(170,106,61,.23),6px 8px 8px rgba(122,68,43,.11)}
+    .hero-name-hit{position:absolute;inset:-8px -4px;z-index:2;width:calc(100% + 8px);border:0;border-radius:14px;background:transparent;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+    .hero-name-hit:focus-visible{outline:2px dashed #4c8196;outline-offset:8px}
+    .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+    .name-kitten{position:fixed;z-index:32;width:70px;height:70px;pointer-events:none;opacity:0;visibility:hidden;filter:drop-shadow(1px 3px 1px rgba(63,47,31,.14))}
+    .name-kitten.is-waving{visibility:visible;animation:helloArrival 2.7s ease both}
+    .name-kitten .sleep-mode,.name-kitten .lick-b{display:none}
+    .name-kitten .lick-a{animation:none;opacity:1;transform-box:fill-box;transform-origin:18% 95%}
+    .name-kitten.is-waving .lick-a{animation:kittenWave .42s .2s ease-in-out 5 alternate}
+    .name-kitten .lick-a path:last-child{display:none}
+    @keyframes helloArrival{0%{opacity:0;transform:translateY(10px) scale(.8) rotate(-5deg)}12%,86%{opacity:1;transform:translateY(0) scale(1) rotate(0)}100%{opacity:0;transform:translateY(3px) scale(.95)}}
+    @keyframes kittenWave{from{transform:rotate(-14deg) translateY(-3px)}to{transform:rotate(21deg) translateY(-5px)}}
+    .page-intro{display:none;position:fixed;inset:0;z-index:100;overflow:hidden;pointer-events:none;isolation:isolate}
+    .intro-pending .page-intro{display:block;animation:introFinish .3s 2.7s ease both}
+    .intro-veil{position:absolute;inset:0 auto 0 0;width:calc(100vw + 210px);background:var(--paper);clip-path:polygon(0 0,100% 0,100% 100%,0 100%,8px 86%,2px 72%,12px 56%,3px 38%,10px 20%);will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
+    .intro-veil::before{content:"";position:absolute;inset:0 auto 0 0;width:36px;background:linear-gradient(90deg,rgba(203,177,144,.25),rgba(255,253,247,.65) 40%,transparent)}
+    .intro-veil::after{content:"";position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.22'/%3E%3C/svg%3E")}
+    .intro-runner{position:absolute;left:0;top:56%;width:88px;height:72px;z-index:2;will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
+    .intro-runner>svg:not(.intro-thread){position:absolute;left:-35px;bottom:0;width:100%;height:100%;overflow:visible;shape-rendering:crispEdges;filter:drop-shadow(1px 3px 0 rgba(73,56,39,.12))}
+    .run-body{animation:runBounce .32s linear infinite;transform-origin:50% 65%}
+    .run-leg{transform-box:fill-box;transform-origin:50% 0;animation:runStride .32s linear infinite}
+    .run-leg.opposite{animation-delay:-.16s}
+    .run-tail{transform-box:fill-box;transform-origin:100% 90%;animation:runTail .32s ease-in-out infinite alternate}
+    .intro-thread{position:absolute;right:calc(100% + 12px);bottom:12px;width:176px;height:42px;overflow:visible;opacity:.7}
+    .intro-thread path{fill:none;stroke-width:1.3;stroke-linecap:round}
+    .intro-thread .thread-gold{stroke:#d9af4e}.intro-thread .thread-blue{stroke:#78a9c8}
+    .intro-thread .thread-star{fill:#d3a446;stroke:none;animation:trailTwinkle .9s ease-in-out infinite alternate}
+    .intro-thread .thread-star:last-child{fill:#bb8b78;animation-delay:-.4s}
+    .intro-pending .idle-kitten{opacity:0!important;visibility:hidden!important}
+    .name-greeting .idle-kitten{opacity:0!important;visibility:hidden!important}
+    @keyframes paperUnfold{from{transform:translateX(-100px)}to{transform:translateX(calc(100vw + 100px))}}
+    @keyframes introFinish{to{opacity:0;visibility:hidden}}
+    @keyframes runBounce{0%,100%{transform:translateY(0) rotate(-1deg)}25%,75%{transform:translateY(-3px)}50%{transform:translateY(0) rotate(1deg)}}
+    @keyframes runStride{0%,100%{transform:rotate(26deg)}50%{transform:rotate(-28deg)}}
+    @keyframes runTail{from{transform:rotate(-8deg)}to{transform:rotate(6deg)}}
+    @keyframes trailTwinkle{from{opacity:.25}to{opacity:.65}}
+    @media(max-width:680px){.intro-runner{width:64px;height:54px;top:54%}.intro-thread{width:110px;right:calc(100% + 5px)}.name-kitten{width:56px;height:56px}}
+    @media(prefers-reduced-motion:reduce){.page-intro{display:none!important}.name-kitten.is-waving{animation:none;opacity:1}.name-kitten .lick-a{animation:none!important}}
   </style>
 </head>
 <body>
+  <div class="page-intro" aria-hidden="true">
+    <div class="intro-veil"></div>
+    <div class="intro-runner">
+      <svg class="intro-thread" viewBox="0 0 176 42"><path class="thread-gold" d="M2 30C26 12 41 38 70 27S102 9 126 25 150 31 176 25"/><path class="thread-blue" d="M32 32C60 37 63 17 89 23S125 37 155 27"/><path class="thread-star" d="m48 8 2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path class="thread-star" d="m121 1 1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z"/></svg>
+      <svg viewBox="0 0 112 92">
+        <ellipse cx="58" cy="85" rx="30" ry="3" fill="#6b5847" opacity=".12"/>
+        <g class="run-body" stroke="#844b2f" stroke-width="2" stroke-linejoin="miter">
+          <path class="run-tail" d="M32 56H20V46H12V28H7V20h7v-5h11v6h6v9h-7v-7h-8v8h3v10h8v8h10z" fill="#c97836"/>
+          <path class="run-leg opposite" d="M38 65h9v16h-5v4H31v-5h7z" fill="#c97836"/>
+          <path class="run-leg" d="M69 65h8v16h8v5H70v-6h-1z" fill="#c97836"/>
+          <path d="M28 50h10v-6h31v7h10v18H68v6H37v-7h-9z" fill="#e6a052"/>
+          <path d="M43 64h21v8H43z" fill="#ffe1ae" stroke="none"/>
+          <path class="run-leg" d="M32 63h9v16h-4v7H24v-6h8z" fill="#e6a052"/>
+          <path class="run-leg opposite" d="M66 64h9v17h8v5H68v-7h-2z" fill="#e6a052"/>
+          <path d="M62 30h5V19h10v6h10V20h9v12h7v20h-6v8H70v-6h-8z" fill="#e6a052"/>
+          <path d="M68 23h6v8h-6zm22 2h5v7h-5z" fill="#f6b4a5" stroke="none"/>
+          <path d="M79 42h23v9h-7v5H79z" fill="#fff0d4" stroke="none"/>
+          <path d="M89 36h5v6h-5z" fill="#393735" stroke="none"/>
+          <path d="M90 36h2v2h-2z" fill="#fff5dc" stroke="none"/>
+          <path d="M101 43h4v4h-4z" fill="#d77a70" stroke="none"/>
+          <path d="M92 50h6v-2" fill="none"/>
+          <path d="M95 49h12m-12 4h10" fill="none" stroke="#844b2f" stroke-width="1"/>
+          <path d="M72 32h4v5h-4zm7-3h4v6h-4zM37 49h5v7h-5zm11-2h5v8h-5zm11 1h5v7h-5z" fill="#c97836" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <script>
+    (()=>{
+      const intro=document.querySelector('.page-intro');
+      const finish=()=>{document.documentElement.classList.remove('intro-pending');intro?.remove();};
+      if(!document.documentElement.classList.contains('intro-pending')){finish();return;}
+      intro.addEventListener('animationend',event=>{if(event.animationName==='introFinish')finish();});
+      setTimeout(finish,3200);
+      // A visitor can immediately move on; returning from the back cache never replays it.
+      addEventListener('pagehide',finish,{once:true});
+      addEventListener('wheel',finish,{once:true,passive:true});
+      addEventListener('touchstart',finish,{once:true,passive:true});
+      addEventListener('pointerdown',finish,{once:true,passive:true});
+      addEventListener('keydown',finish,{once:true});
+    })();
+  </script>
   <div class="scroll-progress" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Shi Qingying home"><span class="brand-mark"><img src="images/avatar-lakeside.jpg" alt="Shi Qingying"></span><span>Shi Qingying<br><small style="font-weight:600;letter-spacing:.08em;color:#81796f">Story atlas · Huzhou</small></span></a>
+    <a class="brand" href="#top" aria-label="Shi Qingying home"><span class="brand-mark"><img src="images/avatar-lakeside.jpg" alt="Shi Qingying"></span><span>Shi Qingying<br><small style="font-weight:600;letter-spacing:.08em;color:#81796f">Story atlas</small></span></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Main navigation">
       <a href="#experience">Experience</a><a href="#research">Research</a><a href="#competitions">Competitions</a><a href="#global">Global</a><a href="#honors">Honors</a><a href="#life">Life</a><a href="#contact">Contact</a>
@@ -412,9 +506,9 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <div class="hero-kicker"><span class="spark">✳</span> Storyteller · Student Communicator · Curious Observer</div>
-          <h1><span>Shi</span><span class="surname">Qingying</span></h1>
-          <div class="hero-motto">Stay curious. Stay passionate.</div>
-          <p class="hero-lede">I am drawn to the people and details behind a headline. From city newsrooms and classrooms to international forums, I listen closely, ask better questions and help stories travel across communities.</p>
+          <div class="hero-name-shell"><h1><span>Shi</span><span class="surname">Qingying</span></h1><button type="button" class="hero-name-hit"><span class="sr-only">Say hello to the little cat</span></button></div>
+          <div class="hero-motto"><span class="motto-line">Stay curious.</span><span class="motto-line">Stay passionate.</span></div>
+          <p class="hero-lede">I want to tell stories that travel across borders and find a home in the hearts of people I may never meet.</p>
           <div class="hero-actions">
             <a class="button dark" href="#experience">Follow the story <span aria-hidden="true">↘</span></a>
             <a class="button ghost" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
@@ -429,7 +523,7 @@
           <svg class="doodle doodle-spiral" viewBox="0 0 80 80" aria-hidden="true"><path d="M39 40c0-9 13-10 16-2 5 14-17 25-29 13-15-16 2-42 22-40 25 2 32 32 20 50"/></svg>
           <figure class="portrait-card">
             <img src="images/behind-the-lens.jpg" alt="Shi Qingying photographing behind her camera">
-            <figcaption class="portrait-caption"><span>Behind the lens</span><span>A view from Huzhou</span></figcaption>
+            <figcaption class="portrait-caption"><span>Behind the lens</span><span></span></figcaption>
           </figure>
           <div class="hero-sticker">MAKE<br>ROOM FOR<br>WONDER ✦</div>
           <div class="hero-side-note">a little bit of everything,<br>with a lot of heart ↗</div>
@@ -440,31 +534,31 @@
 
     <section class="section" id="experience" data-chapter="01"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot"></span> 01 / Professional experience · Language in motion</div><h2>Words that<br>cross borders.</h2></div><p class="section-note">Translation, teaching and the craft of making local voices travel further. Swipe the story rail →</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot"></span> 01 / Professional experience · Language in motion</div><h2>Words that<br>cross borders.</h2></div><p class="section-note">Here’s a selection of my work.<br>Swipe the story rail</p></div>
         <div class="rail-controls"><span>Selected work · drag / swipe to wander</span><div class="rail-buttons"><button type="button" data-rail="experience-stack" data-dir="-1" aria-label="Previous experience">←</button><button type="button" data-rail="experience-stack" data-dir="1" aria-label="Next experience">→</button></div></div>
         <div class="experience-stack" tabindex="0" aria-label="Horizontal experience gallery. Use arrow keys to explore.">
           <article class="experience-card reveal city-experience">
             <figure class="story-cover city-cover city-news-shot"><img src="images/huzhou-news-screenshot.png" alt="Full-page screenshot of Huzhou Today, the Huzhou Municipal Government English news site"><figcaption>Huzhou Today · official English news</figcaption></figure>
-            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">City stories, in English</h3><div class="card-place">News Translation Intern · Huzhou Municipal Government · Remote</div></div><span class="card-date">Apr 2026 — now</span></div>
-            <p class="card-summary">I translate weekly city news for readers beyond Huzhou: finding the lead, preserving the facts and giving institutional language a clear, human rhythm.</p>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">City stories, in English</h3><div class="card-place">News Translation Intern · Huzhou Municipal Government</div></div><span class="card-date">Apr 2026 — now</span></div>
+            <p class="card-summary">Translate weekly city news for readers beyond Huzhou.</p>
             <details class="more"><summary>Inside the work</summary><div class="details-body"><ul><li>Cover municipal updates, public affairs, civic life, culture, sport and local development.</li><li>Post-edit AI drafts against Chinese source texts, checking omissions, names, titles, terminology and context.</li><li>Rework headlines, leads and sentence structure for international readers, with accuracy and original emphasis intact.</li></ul></div></details>
-            <div class="metric-ribbon"><span class="metric">28 Thursday editions · Apr 30–Nov 5, 2026</span><span class="metric">Source-first editing</span></div></div>
+            <div class="metric-ribbon"><span class="metric">30+ Thursday editions · Apr 30–Present</span><span class="metric">Source-first editing</span></div></div>
           </article>
           <article class="experience-card reveal delay-1">
             <figure class="story-cover agreement-cover agreement-scan"><a href="images/agreement-original.png" target="_blank" rel="noreferrer"><img src="images/agreement-original.png" alt="Full agreement on the joint professional practice base between Huzhou Normal University and Azerbaijan State University of Economics"></a></figure>
-            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">Campus news & agreements</h3><div class="card-place">Campus News Translation · Huzhou Normal University · Remote</div></div><span class="card-date">May 11, 2026 — now</span></div>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">Two universities, one shared goal</h3><div class="card-place">Agreement Translation · Huzhou Normal University</div></div><span class="card-date">May 11, 2026 — now</span></div>
             <p class="card-summary">I translated campus news and a formal university agreement selected by faculty members. The work called for close reading, consistent institutional terminology and careful handling of people, departments and commitments.</p>
             <details class="more"><summary>One project I carried</summary><div class="details-body"><p>Independently translated an agreement with Azerbaijan State University of Economics establishing a joint professional practice base for the university’s master’s program. The English version was accepted for institutional use.</p><p><em>Agreement on the Establishment of the Joint Professional Practice Base for the Master’s Program in International Chinese Language Education</em></p></div></details></div>
           </article>
           <article class="experience-card reveal">
             <a class="certificate-frame" href="images/cicg-internship-certificate.jpg" target="_blank" rel="noreferrer"><img class="exp-photo landscape-proof" src="images/cicg-internship-certificate.jpg" alt="Landscape internship certificate from CICG Center for Asia and Pacific; open full scan"></a>
-            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">A first editing room</h3><div class="card-place">Translation Intern · CICG Center for Asia and Pacific · Remote</div></div><span class="card-date">Feb — Mar 2025</span></div>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">New subjects, sharper skills</h3><div class="card-place">Translation Intern · CICG Center for Asia and Pacific</div></div><span class="card-date">Feb — Mar 2025</span></div>
             <p class="card-summary">More than 4,000 Chinese characters across economics, environment, culture and international affairs — revised through feedback from professional translators and editors.</p>
             <details class="more"><summary>What sharpened my ear</summary><div class="details-body"><p>Topics ranged from consumption and green transition to traditional Chinese medicine and China’s bilateral relations. Each round of editing helped me build factual accuracy, logical flow, register and contextual clarity.</p></div></details></div>
           </article>
           <article class="experience-card reveal delay-1">
             <img class="exp-photo" src="images/primary-school-teaching.jpg" alt="Shi Qingying teaching English at Keqiao Experimental Primary School">
-            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">English in the classroom</h3><div class="card-place">Teaching Practicum · Keqiao Experimental Primary School</div></div><span class="card-date">Teaching experience</span></div><p class="card-summary">A school-based teaching practicum brought lesson planning, classroom communication and language learning into everyday practice.</p><details class="more"><summary>Another classroom</summary><div class="details-body"><p>On May 24, 2025, I also joined a Chinese–foreign co-teaching session at Aishan Changxi Primary School, supporting a bilingual classroom experience.</p></div></details></div>
+            <div class="exp-copy"><div class="card-top"><div><h3 class="card-title">English in the classroom</h3><div class="card-place">Teaching Practicum · Keqiao Experimental Primary School</div></div><span class="card-date">Teaching experience</span></div><p class="card-summary">A school-based teaching practicum brought lesson planning, classroom communication and language learning into everyday practice.</p><details class="more"><summary>Another classroom</summary><div class="details-body"><p>My full-English lesson, in a real classroom.</p></div></details></div>
           </article>
         </div>
 
@@ -492,7 +586,7 @@
 
     <section class="section" id="research" data-chapter="02"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#4c91ad"></span> 02 / Research · A question from the classroom</div><h2>When a voice<br>becomes a lesson.</h2></div><p class="section-note">A classroom question, explored with English education majors and voice-interactive AI.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#4c91ad"></span> 02 / Research · A question from the classroom</div><h2>Where AI Meets<br>the Art of Teaching</h2></div><p class="section-note">Learning to grow alongside AI</p></div>
         <div class="research-grid">
           <article class="research-main reveal">
             <div class="research-label">Classroom inquiry · Published 2026</div>
@@ -510,7 +604,7 @@
 
     <section class="section" id="competitions" data-chapter="03"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> 03 / Competitions · Practice under pressure</div><h2>Play the room.<br>Find the line.</h2></div><p class="section-note">Reading, speaking, planning and debate: each contest trained a different part of how I build and share a story.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> 03 / Competitions · Practice under pressure</div><h2>Push My Limits.<br>Go Further.</h2></div><p class="section-note">Whatever the medium, I love a good challenge.<br><br>Debating, interpreting, public speaking, translating, reading and writing, and making short videos.</p></div>
         <div class="debate-strip reveal">
           <div><div class="eyebrow" style="color:#ddd3c8"><span class="dot" style="background:var(--yellow)"></span> Debate · First on the bill</div><h3>Arguments with a pulse.</h3><p>Multiple roles, one team, and a room full of questions.</p></div>
           <div class="debate-award"><span>National Final · Bronze · 2026</span><span>East China Regional · Gold · 2025</span><span>East China Regional · Bronze · 2025</span><span>Campus Champion · 2025</span></div>
@@ -529,7 +623,7 @@
 
     <section class="section" id="global" data-chapter="04"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#82a88b"></span> 04 / Global experiences · Across borders</div><h2>Language grows<br>between people.</h2></div><p class="section-note">Language became real to me in the in-between moments: at a welcome desk, beside a guest, and in the questions after a talk.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#82a88b"></span> 04 / Global experiences · Across borders</div><h2>Language grows<br>between people.</h2></div><p class="section-note">Always in conversation with the world</p></div>
         <div class="global-grid">
           <article class="passport reveal"><img src="images/ucl-presentation.jpg" alt="Shi Qingying presenting during the UCL Institute of Education winter programme"><div class="passport-copy"><div class="passport-date">Jan — Feb 2025 · London</div><h3>UCL Institute of Education</h3><div class="place">Winter Academic Programme · Education</div><p>Explored EAP, UCL academic culture, early years and primary education, TESOL, and educational psychology.</p></div></article>
           <article class="passport reveal delay-1"><img src="images/green-low-carbon-interpreting.jpg" alt="Shi Qingying with Erik Solheim at the Green Low-Carbon Innovation Conference"><div class="passport-copy"><div class="passport-date">Aug 2025 · Huzhou</div><h3>Green Low-Carbon Innovation Conference</h3><div class="place">Liaison interpreting volunteer</div><p>Supported the visit of Erik Solheim, former UN Under-Secretary-General, with interpretation and guest coordination around the conference and sustainability seminar.</p></div></article>
@@ -544,7 +638,7 @@
 
     <section class="section" id="honors" data-chapter="05"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#c295bd"></span> 05 / Honors & awards · Proof in the work</div><h2>Milestones,<br>kept close.</h2></div><p class="section-note">Ordered as requested. Open a certificate to see its full scan. Each row holds three recognitions.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#c295bd"></span> 05 / Honors & awards · Proof in the work</div><h2>Milestones,<br>kept close.</h2></div><p class="section-note">Grateful for how far I’ve come. Still moving forward.</p></div>
         <div class="honor-collage">
           <article class="honor-card reveal"><a href="images/award-national-scholarship.jpg" target="_blank" rel="noreferrer"><img src="images/award-national-scholarship.jpg" alt="China National Scholarship certificate, 2024–2025"><div class="caption">China National Scholarship</div><div class="subcaption">2024–2025 · National</div></a></article>
           <article class="honor-card reveal delay-1"><a href="images/award-top-ten-students.jpg" target="_blank" rel="noreferrer"><img src="images/award-top-ten-students.jpg" alt="Top Ten Students certificate from Huzhou Normal University"><div class="caption">Top Ten Students</div><div class="subcaption">Huzhou Normal University · 2026</div></a></article>
@@ -589,9 +683,9 @@
 
     <section class="section" id="life" data-chapter="06"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#ef7259"></span> 06 / Life & interests · Off the page</div><h2>Life Beyond the Classroom.</h2></div><p class="section-note">A photo-led scrapbook of speaking, teaching, hosting and the ordinary moments between them.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#ef7259"></span> 06 / Life & interests · Off the page</div><h2>Life Beyond the Classroom.</h2></div><p class="section-note">A photo-led scrapbook of ordinary moments.</p></div>
         <div class="life-grid">
-          <article class="life-intro reveal"><h3>A little more<br>about me.</h3><p>Student life has meant a microphone, a lesson plan, a team huddle, an unfamiliar city and the small joy of sharing something useful.</p><span class="quote">little chapters, still unfolding ↗</span></article>
+          <article class="life-intro reveal"><h3>A little more<br>about me.</h3><p>Conversations, turning points, and ordinary afternoons I never thought I’d miss still shape how I see the world and who I’m becoming.</p><span class="quote">little chapters, still unfolding ↗</span></article>
           <div class="life-photo-stack" tabindex="0" aria-label="Horizontal photo gallery. Use arrow keys to explore.">
             <figure class="life-shot reveal"><img src="images/freshman-ceremony-speech.jpg" alt="Shi Qingying speaking as a student representative at the 2026 freshman ceremony"><figcaption>A new chapter<small>Student representative · 2026</small></figcaption></figure>
             <figure class="life-shot reveal delay-1"><img src="images/ucl-faculty-group.jpg" alt="Shi Qingying with UCL teachers and classmates"><figcaption>New people, new places<small>UCL Institute of Education</small></figcaption></figure>
@@ -610,8 +704,8 @@
         <div class="pressroom reveal" style="margin-top:45px">
           <div class="pressroom-head"><h3>A little more of my story</h3><span style="font:1.4rem var(--hand);color:#a14b39">click through for the original ↗</span></div>
           <div class="press-grid">
-            <article class="press-card" style="background:#e5e8ef"><div class="press-meta"><span>Campus feature</span><span>Interview</span></div><h4>A conversation about learning, persistence, and finding your own pace</h4><p>Featured in my college’s WeChat article.</p><a class="read" href="https://mp.weixin.qq.com/s/uP5jq8UyHGyvSGqy1Z0Sww" target="_blank" rel="noreferrer">Read the original interview ↗</a></article>
-            <article class="press-card" style="background:#f2e3bd"><div class="press-meta"><span>Student speaker</span><span>Campus life</span></div><h4>Study notes, shared out loud</h4><p>From scholarship defence and student talks to speaking at the 2026 freshman ceremony, I like helping experience travel from one person to another.</p><span class="read">Learning · hosting · sharing</span></article>
+            <article class="press-card" style="background:#e5e8ef"><div class="press-meta"><span>Campus feature</span><span>Interview</span></div><h4>My First Time Being Interviewed</h4><p>Featured in my college’s WeChat article.</p><a class="read" href="https://mp.weixin.qq.com/s/uP5jq8UyHGyvSGqy1Z0Sww" target="_blank" rel="noreferrer">Read the original interview ↗</a></article>
+            <article class="press-card" style="background:#f2e3bd"><div class="press-meta"><span>Student speaker</span><span>Campus life</span></div><h4>Crowned by Curiosity</h4><p>From scholarship defence and student talks to speaking at the 2026 freshman ceremony, I like helping experience travel from one person to another.</p><span class="read">Learning · hosting · sharing</span></article>
           </div>
         </div>
       </div>
@@ -685,19 +779,22 @@
     const languageTrigger=document.querySelector('.language-trigger');
     const copy={
       'zh-Hans':{
+        '.brand small':['Story atlas · Huzhou'],
+        '.portrait-caption > span:last-child':['A view from Huzhou'],
         '.nav > a':['经历','研究','竞赛','全球交流','荣誉','生活','联系'],
         '.hero-kicker':['<span class="spark">✳</span> 新闻与传播方向 · 先走近，再落笔'],
         '.hero-copy h1':['<span>施</span><span class="surname">青莹</span>'],
         '.hero-motto':['向未知垂眸，载热忱漫游'],
-        '.hero-lede':['从一条新闻背后的人和事出发，我喜欢查资料、听讲述、追问来处，再把值得记下的部分写清楚。'],
-        '.hero-actions .button':['看看我做过的事 <span aria-hidden="true">↘</span>','写信给我 <span aria-hidden="true">↗</span>'],
+        '.hero-name-hit .sr-only':['和小猫打个招呼'],
+        '.hero-lede':['新闻于我，不止于那一条稿子。我更愿意从背后的人与事切入：翻阅、倾听、溯源，直到那些值得留下的部分，被写得清楚'],
+        '.hero-actions .button':['看看我的故事 <span aria-hidden="true">↘</span>','写信给我 <span aria-hidden="true">↗</span>'],
         '.hero-meta .scribble':['最近总在追问：然后呢？'],
-        '.section-head .eyebrow':['01 / 经历 · 去现场看看','02 / 研究 · 从课堂里的问题开始','03 / 竞赛 · 带着观点去碰撞','04 / 全球交流 · 走远一点，再带着故事回来','05 / 荣誉 · 每一步努力都算数','06 / 生活 · 镜头之外'],
+        '.section-head .eyebrow':['01 / 经历 · 去现场看看','02 / 研究 · 从课堂里的问题开始','03 / 竞赛 · 带着观点去碰撞','04 / 全球交流 · 走远一点，听到更多的故事','05 / 荣誉 · 每一步努力都算数','06 / 生活 · 镜头之外'],
         '.section-head h2':['从湖州出发，<br>把目光带远','这是一场关于AI与课堂的探索','交锋砺己，登高见远','在远方，<br>和新朋友并肩','奖状之外，<br>是一路的汗水','镜头之外，<br>还有我的日常'],
-        '.section-head .section-note':['从城市新闻到课堂现场，我想先听明白，再找到合适的讲法。','我将永远热忱相待未知','阅读、演讲、规划、辩论。认真准备，也在每次交锋里听见新角度。','世界很大，还有很多路可以走','那些看似不起波澜的日复一日，会突然在某一天，让人看到坚持的意义','上课、主持、分享，散步拍照。这些日常拼起来，才是完整的我。'],
+        '.section-head .section-note':['从城市新闻到课堂现场，我想先听明白，再找到合适的讲法。','我将永远热忱相待未知','辩论、口译、演讲、笔译、读写、短视频…… 我爱一切挑战','世界很大，还有很多路可以走','那些看似不起波澜的日复一日，会突然在某一天，让人看到坚持的意义','生活中的每个瞬间都组成了我。'],
         '.card-title':['把湖州新闻写给世界看','执笔留下与阿塞拜疆国立经济大学的合作协议','千种文稿，一种声口','从讲台下，到讲台上'],
         '.card-place':['湖州市人民政府 · 英文新闻译写 · 远程实习','湖州师范大学 · 协议翻译 · 远程实习','中国外文局亚太传播中心 · 翻译实习 · 远程','柯桥实验小学 · 教学实践'],
-        '.card-summary':['每周为湖州新闻做英文译写，核对人名、事实与语气，把一条本地消息写成英文读者读得懂的新闻。','从校园报道到合作协议，反复核对专名和上下文。我在意的不只是准确，也希望读者读得顺。','围绕经济、环境、文化与国际关系，完成逾 4,000 字译稿。查资料、改句子、再核事实；我喜欢把复杂信息一层层理清。','全英文授课，感受真实课堂'],
+        '.card-summary':['每周为湖州市政府翻译新闻稿，把城市故事传递到远方。','从校园报道到合作协议，反复核对专名和上下文。我在意的不只是准确，也希望读者读得顺。','围绕经济、环境、文化与国际关系，完成逾 4,000 字译稿。查资料、改句子、再核事实；我喜欢把复杂信息一层层理清。','全英文授课，感受真实课堂'],
         '.card-date':['2026 年 4 月至今','2026 年 5 月 11 日至今','2025 年 2 月至 3 月','教学实践'],
         '.metric':['每周四更新 · 2026 年 4 月 30 日至 11 月 5 日','对照原文，逐句校订'],
         '.rail-controls > span':['往左往右，继续翻阅'],
@@ -713,7 +810,7 @@
         '.research-label':['一项从课堂出发的行动研究 · 2026'],
         '.research-main h3':['<span>Action Research on Voice-Interactive AI in Instructional Practice Training for English Education Majors</span><small class="title-translation">语音交互AI辅助英语师范生教学实践训练行动研究</small>'],
         '.research-main p':['这项研究关注语音交互AI如何融入英语师范生的教学实践训练，也留意技术反馈与真实课堂经验各自能发挥什么作用。'],
-        '.details-body':['<ul><li>报道涵盖公共事务、城市生活、文化、体育与地方发展。</li><li>对照中文原稿校订 AI 初稿，核对事实、人名职务、术语和上下文，补足遗漏。</li><li>再推敲标题、导语与句式，让英文读者读得明白，信息也不走样。</li></ul>','<p>我独立翻译了湖州师范大学与阿塞拜疆国立经济大学共建国际中文教育硕士专业实践基地的协议，英文稿获校方采纳。</p><p><em>国际中文教育硕士专业实践基地共建协议</em></p>','<p>选题涵盖消费、绿色转型、中医药与国际关系等主题。反复修改让我更在意事实是否准确、逻辑是否顺畅、表达是否贴合读者。</p>','<p>2025 年 5 月 24 日，我还参加了爱山长溪小学的中外双师课堂，在真实教学中协助课堂交流。</p>','<p>为期 28 天的四轮实践采用教学视频、反思日志、问卷与访谈，记录学生在备课、模拟授课和课后反思中的体验。</p>'],
+        '.details-body':['<ul><li>报道涵盖公共事务、城市生活、文化、体育与地方发展。</li><li>对照中文原稿校订 AI 初稿，核对事实、人名职务、术语和上下文，补足遗漏。</li><li>再推敲标题、导语与句式，让英文读者读得明白，信息也不走样。</li></ul>','<p>我独立翻译了湖州师范大学与阿塞拜疆国立经济大学共建国际中文教育硕士专业实践基地的协议，英文稿获校方采纳。</p>','<p>选题涵盖消费、绿色转型、中医药与国际关系等主题。反复修改让我更在意事实是否准确、逻辑是否顺畅、表达是否贴合读者。</p>','<p>独立设计并完成小学四年级英语课堂。</p>','<p>为期 28 天的四轮实践采用教学视频、反思日志、问卷与访谈，记录学生在备课、模拟授课和课后反思中的体验。</p>'],
         '.passport-copy h3':['<span>UCL Institute of Education</span><small class="title-translation">伦敦大学学院教育学院</small>','<span>Green Low-Carbon Innovation Conference</span><small class="title-translation">绿色低碳创新大会</small>','<span>China–Africa STEM Educators Programme</span><small class="title-translation">教育部中非 STEM 论坛</small>','<span>Azerbaijan Student Summer Camp</span><small class="title-translation">阿塞拜疆学生夏令营</small>','<span>UN China Study Programme</span><small class="title-translation">联合国中国研修项目</small>','<span>International Think Tank Forum</span><small class="title-translation">国际智库论坛</small>','<span>Sino-French Football Match</span><small class="title-translation">中法足球友谊赛</small>'],
         '.passport-copy .place':['UCL 访学','陪同口译','论坛现场 · 湖州智慧 STEM 教育实践','陪同口译','潞村参访 · 陪同交流','欧美同学会 · 志愿服务','学生组织者'],
         '.passport-copy p':['项目期间接触了学术英语、UCL 学术文化、幼儿与小学教育、TESOL 和教育心理学。','协助接待来访的 Erik Solheim（联合国前副秘书长），并参与大会及可持续发展研讨活动中的嘉宾协调。','协调语言志愿者，向海外教育工作者介绍北斗暖流救生衣与“寒冬战袍”两个学生项目。与一位肯尼亚来宾交流后，团队也迎来了项目中唯一一次商务合作机会。','协助接待阿塞拜疆语言大学孔子学院学生，陪同参与校园活动与文化参访。','陪同联合国官员参观湖州，协助沿途沟通与现场交流。','支持第三届国际智库论坛，协助现场沟通与嘉宾交流。','参与活动筹备与现场组织，让本地学生和来访球员因足球相聚。'],
@@ -724,7 +821,7 @@
         '.journal-line a':['阅读论文 ↗'],
         '.debate-strip .eyebrow':['辩论 · 有交锋，也有倾听'],
         '.debate-strip h3':['聆听思想碰撞的火花'],
-        '.debate-strip p':['从校赛到华东赛区，再到全国赛，和队友一起接住追问、拆解观点，也认真听完对方的理由。'],
+        '.debate-strip p':['从校赛到华东赛区，再到全国赛，见到了更广的世界'],
         '.debate-award span':['全国总决赛 · 铜奖 · 2026','华东赛区 · 金奖 · 2025','华东赛区 · 铜奖 · 2025','校赛冠军 · 2025'],
         '.competition-card .level':['全国 · 阅读','全国 · 翻译','浙江省 · 读写','浙江省 · 汉译英','校级 · 口译','校级 · 笔译'],
         '.competition-card h3':['一等奖','三等奖','银奖','三等奖','一等奖','金奖'],
@@ -742,7 +839,7 @@
         'footer span':['© 2026 施青莹 · 在湖州写下眼前，也望向远方'],
         'footer a':['回到开头 ↑'],
         '.life-intro h3':['日常里，<br>也有好风景。'],
-        '.life-intro p':['有时拿起麦克风，有时走进教室、去一座陌生城市。也有不少时候，我只是散步、拍照，顺手记下日常里的小发现。'],
+        '.life-intro p':['讲台、微笑、蓝天…… 生活中的点点滴滴，都值得铭记。'],
         '.life-shot figcaption':['第一次站在新生面前<small>新生典礼 · 学生代表发言</small>','在伦敦，聊课堂也聊理想<small>伦敦大学学院教育学院</small>','那天，麦克风在我手里<small>寝室美化大赛主持</small>','把自己的故事讲给大家听<small>学习经验分享</small>','把志愿服务做在日常里<small>社区志愿服务</small>','汇报一年的努力<small>国家奖学金答辩</small>','欢迎远方的新朋友<small>阿塞拜疆学生夏令营</small>','一次登台，一次练习<small>校园宣讲</small>'],
         '.life-video-card h3':['中外双师教学','Silent Pioneering, Bright Future<small class="title-translation">孤身拓荒，烛照未来</small>'],
         '.life-video-card p':['一个与国际学生在爱山常溪小学共同授课的课堂片段。','在 Light Millennium 的青年主导活动中，我分享了物理学家王明贞的故事。这里可查看官方介绍与完整录像。'],
@@ -821,6 +918,38 @@
 
   <script>
     const kitten=document.getElementById('idleKitten');
+    // Reuse this kitten's own face and markings for the name's little greeting.
+    const nameKitten=document.createElement('div');
+    nameKitten.className='name-kitten';
+    nameKitten.setAttribute('aria-hidden','true');
+    nameKitten.append(kitten.querySelector('svg').cloneNode(true));
+    document.body.append(nameKitten);
+    let greetingTimer;
+    function hideNameKitten(){
+      clearTimeout(greetingTimer);
+      nameKitten.classList.remove('is-waving');
+      document.documentElement.classList.remove('name-greeting');
+    }
+    function greetFromName(){
+      hideNameKitten();
+      const name=document.querySelector('.hero-copy h1');
+      const anchor=document.documentElement.lang==='en'?name.firstElementChild:name.lastElementChild;
+      const letters=document.createRange();
+      letters.selectNodeContents(anchor);
+      const bounds=letters.getBoundingClientRect();
+      const size=innerWidth<=680?56:70;
+      const line=document.documentElement.lang==='en'?anchor.getBoundingClientRect():name.getBoundingClientRect();
+      nameKitten.style.left=Math.min(innerWidth-size-12,Math.max(12,bounds.right+8))+'px';
+      nameKitten.style.top=Math.max(82,Math.min(innerHeight-size-12,line.bottom-size-5))+'px';
+      void nameKitten.offsetWidth;
+      nameKitten.classList.add('is-waving');
+      document.documentElement.classList.add('name-greeting');
+      greetingTimer=setTimeout(hideNameKitten,2750);
+    }
+    document.querySelector('.hero-name-hit').addEventListener('click',greetFromName);
+    addEventListener('scroll',hideNameKitten,{passive:true});
+    addEventListener('resize',hideNameKitten,{passive:true});
+    document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',hideNameKitten));
     const dwellTimers=[];
     const meteorTimes=new Map();
     let activeSectionId='';
