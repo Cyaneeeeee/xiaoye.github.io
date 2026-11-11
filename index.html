@@ -377,10 +377,10 @@
 
     html[lang^="zh"] .hero-copy h1{white-space:nowrap}
     html[lang^="zh"] .hero-copy h1>span{display:inline-block}
-    html[lang^="zh"] .hero-motto{font-size:clamp(1.15rem,2.5vw,2.1rem);white-space:nowrap;margin-left:clamp(22px,3vw,36px);transform:translateX(22px) rotate(-2deg);transform-origin:left}
+    html[lang^="zh"] .hero-motto{font-size:clamp(1.15rem,2.5vw,2.1rem);white-space:nowrap;margin-left:clamp(22px,3vw,36px);transform:translate(30px,6px) rotate(-2deg);transform-origin:left}
     html[lang^="zh"] .section-head h2,html[lang^="zh"] .passport-copy h3,html[lang^="zh"] .press-card h4,html[lang^="zh"] .life-intro h3,html[lang^="zh"] .life-video-card h3,html[lang^="zh"] .competition-video h3{line-height:1.18}
     html[lang^="zh"] .research-main h3{line-height:1.2}
-    @media(max-width:680px){html[lang^="zh"] .hero-motto{font-size:clamp(1rem,5.6vw,1.5rem);margin-left:16px;transform:translateX(16px) rotate(-2deg)}}
+    @media(max-width:680px){html[lang^="zh"] .hero-motto{font-size:clamp(1rem,5.6vw,1.5rem);margin-left:16px;transform:translate(20px,4px) rotate(-2deg)}}
 
     .idle-kitten{position:fixed;right:14px;bottom:16px;z-index:24;width:70px;height:70px;margin:0;opacity:0;visibility:hidden;transform:translateY(8px) scale(.82);transition:opacity .3s ease,transform .38s cubic-bezier(.2,.8,.2,1),visibility .3s;pointer-events:none;filter:drop-shadow(1px 3px 1px rgba(63,47,31,.18))}
     .idle-kitten[data-state="grooming"],.idle-kitten[data-state="sleeping"],.idle-kitten[data-state="snoring"]{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
@@ -406,6 +406,8 @@
     html[lang="en"] .hero-motto{line-height:1.22}
     html[lang="en"] .hero-motto .motto-line{display:block;white-space:nowrap}
     html[lang="en"] .hero-motto .motto-line+ .motto-line{margin-left:.75em}
+    html[lang="en"] .english-note-global .note-phrase{display:inline-block;white-space:nowrap}
+    html[lang="en"] .english-note-honors .note-line{display:block;white-space:nowrap}
     .hero-name-shell{position:relative}
     .hero-name-shell h1>span:first-child{text-shadow:1px 1px 0 #bcb2a5,2px 2px 0 #bcb2a5,3px 3px 0 rgba(97,78,58,.19),5px 7px 7px rgba(73,56,39,.10)}
     .hero-name-shell h1>.surname{text-shadow:1px 1px 0 #f2cf58,2px 2px 0 #f2cf58,3px 3px 0 #dca94b,4px 4px 0 rgba(170,106,61,.23),6px 8px 8px rgba(122,68,43,.11)}
@@ -422,18 +424,18 @@
     @keyframes kittenWave{from{transform:rotate(-14deg) translateY(-3px)}to{transform:rotate(21deg) translateY(-5px)}}
     .page-intro{display:none;position:fixed;inset:0;z-index:100;overflow:hidden;pointer-events:none;isolation:isolate}
     .intro-pending .page-intro{display:block;animation:introFinish .3s 2.7s ease both}
-    .intro-veil{position:absolute;inset:0 auto 0 0;width:calc(100vw + 210px);background:var(--paper);clip-path:polygon(0 0,100% 0,100% 100%,0 100%,8px 86%,2px 72%,12px 56%,3px 38%,10px 20%);will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
+    .intro-veil{position:absolute;inset:0 auto 0 0;width:calc(100vw + 210px);background:linear-gradient(135deg,#fff2d7,var(--paper) 48%,#f3ddd6);clip-path:polygon(0 0,100% 0,100% 100%,0 100%,8px 86%,2px 72%,12px 56%,3px 38%,10px 20%);will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
     .intro-veil::before{content:"";position:absolute;inset:0 auto 0 0;width:36px;background:linear-gradient(90deg,rgba(203,177,144,.25),rgba(255,253,247,.65) 40%,transparent)}
     .intro-veil::after{content:"";position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.22'/%3E%3C/svg%3E")}
-    .intro-runner{position:absolute;left:0;top:56%;width:88px;height:72px;z-index:2;will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
+    .intro-runner{position:absolute;left:0;top:56%;width:88px;height:72px;z-index:4;will-change:transform;animation:paperUnfold 2.45s .25s cubic-bezier(.42,0,.24,1) both}
     .intro-runner>svg:not(.intro-thread){position:absolute;left:-35px;bottom:0;width:100%;height:100%;overflow:visible;shape-rendering:crispEdges;filter:drop-shadow(1px 3px 0 rgba(73,56,39,.12))}
     .run-body{animation:runBounce .32s linear infinite;transform-origin:50% 65%}
     .run-leg{transform-box:fill-box;transform-origin:50% 0;animation:runStride .32s linear infinite}
     .run-leg.opposite{animation-delay:-.16s}
     .run-tail{transform-box:fill-box;transform-origin:100% 90%;animation:runTail .32s ease-in-out infinite alternate}
-    .intro-thread{position:absolute;right:calc(100% + 12px);bottom:12px;width:176px;height:42px;overflow:visible;opacity:.7}
-    .intro-thread path{fill:none;stroke-width:1.3;stroke-linecap:round}
-    .intro-thread .thread-gold{stroke:#d9af4e}.intro-thread .thread-blue{stroke:#78a9c8}
+    .intro-thread{position:absolute;right:calc(100% + 12px);bottom:12px;width:240px;height:48px;overflow:visible;opacity:.85}
+    .intro-thread path{fill:none;stroke-width:2;stroke-linecap:round}
+    .intro-thread .thread-gold{stroke:#e3b333}.intro-thread .thread-blue{stroke:#4791af}
     .intro-thread .thread-star{fill:#d3a446;stroke:none;animation:trailTwinkle .9s ease-in-out infinite alternate}
     .intro-thread .thread-star:last-child{fill:#bb8b78;animation-delay:-.4s}
     .intro-pending .idle-kitten{opacity:0!important;visibility:hidden!important}
@@ -444,13 +446,65 @@
     @keyframes runStride{0%,100%{transform:rotate(26deg)}50%{transform:rotate(-28deg)}}
     @keyframes runTail{from{transform:rotate(-8deg)}to{transform:rotate(6deg)}}
     @keyframes trailTwinkle{from{opacity:.25}to{opacity:.65}}
+    /* Three-second colour overture: printed rosettes, flowing ink, then clear paper. */
+    .intro-rosette{position:absolute;left:7vw;top:11vh;width:67vmin;aspect-ratio:1;background:conic-gradient(from 15deg,#ef7259 0 45deg,#f2cf58 45deg 90deg,#82b0bb 90deg 135deg,#c9b8d6 135deg 180deg,#ef7259 180deg 225deg,#f2cf58 225deg 270deg,#82b0bb 270deg 315deg,#c9b8d6 315deg);clip-path:polygon(50% 0,58% 17%,75% 7%,75% 27%,94% 25%,84% 43%,100% 50%,83% 58%,94% 75%,74% 75%,75% 94%,57% 84%,50% 100%,42% 83%,25% 94%,25% 74%,6% 75%,17% 57%,0 50%,17% 42%,6% 25%,26% 25%,25% 6%,43% 17%);animation:rosetteUnfurl 2.6s cubic-bezier(.16,.8,.2,1) both;opacity:.85}
+    .intro-rosette::after{content:"";position:absolute;inset:35%;border-radius:50%;background:#fff5e4;box-shadow:0 0 0 2vmin rgba(255,245,228,.2)}
+    .intro-rosette.alt{left:57vw;top:49vh;width:75vmin;background:conic-gradient(from 40deg,#ef7259,#e7b93c,#ef9a83,#6ca2b1,#c6aad3,#ef7259);animation-delay:.12s;opacity:.7}
+    .intro-print-orbit{position:absolute;left:4vw;top:29vh;width:77vw;height:36vh;border:2px dashed #4c8da4;border-radius:50%;transform:rotate(-23deg);opacity:.5;animation:printOrbit 2.5s ease-out both}
+    .intro-ribbons{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+    .intro-ribbons .colour-ribbon{fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:ribbonSweep 2.5s .12s cubic-bezier(.33,.05,.2,1) both}
+    .intro-ribbons .colour-ribbon.blue{animation-delay:.28s}
+    .intro-ribbons .colour-ribbon.gold{animation-delay:.4s}
+    .intro-ribbons .fine-ribbon{stroke-width:2;animation-delay:.32s}
+    .intro-orb{position:absolute;z-index:2;left:66%;top:27%;width:24vmin;height:24vmin;border:2px solid #ef7259;border-radius:50%;animation:colourOrbit 1.5s .95s ease-out both}
+    .intro-orb::before,.intro-orb::after{content:"";position:absolute;inset:12%;border:1px dashed #3e8caa;border-radius:50%;transform:rotate(-25deg)}
+    .intro-orb::after{inset:24%;border:2px solid #ddb346}
+    .intro-confetti{position:absolute;inset:0;z-index:3}
+    .intro-confetti i{position:absolute;left:var(--x);top:var(--y);width:var(--size,12px);height:var(--size,12px);background:var(--colour,var(--coral));animation:colourScatter 1.25s var(--delay,.5s) cubic-bezier(.15,.75,.25,1) both}
+    .intro-confetti .star{clip-path:polygon(50% 0,62% 36%,100% 50%,64% 62%,50% 100%,38% 64%,0 50%,36% 38%)}
+    .intro-confetti .dot{border-radius:50%}
+    .intro-confetti .tape{height:calc(var(--size,12px)*2.8);opacity:1;clip-path:polygon(0 5%,100% 0,88% 100%,12% 94%)}
+    @keyframes rosetteUnfurl{0%{transform:scale(.25) rotate(-65deg);opacity:0}22%{opacity:.9}65%{transform:scale(1.06) rotate(32deg);opacity:.85}100%{transform:scale(1.22) rotate(70deg);opacity:0}}
+    @keyframes printOrbit{from{transform:rotate(-45deg) scale(.55);opacity:0}40%{opacity:.5}to{transform:rotate(-12deg) scale(1.15);opacity:0}}
+    @keyframes ribbonSweep{0%{stroke-dashoffset:1;opacity:0}12%{opacity:.86}64%{stroke-dashoffset:0;opacity:.8}100%{stroke-dashoffset:-.65;opacity:0}}
+    @keyframes colourOrbit{0%{transform:scale(.12) rotate(-35deg);opacity:0}25%{opacity:.65}100%{transform:scale(1.6) rotate(55deg);opacity:0}}
+    @keyframes colourScatter{0%{opacity:0;transform:translate(-50px,30px) rotate(-50deg) scale(.1)}23%{opacity:.9}65%{opacity:.8}100%{opacity:0;transform:translate(45px,-85px) rotate(var(--turn,150deg)) scale(.45)}}
+    @media(max-width:680px){.intro-rosette{left:-12vw;top:12vh;width:90vmin}.intro-rosette.alt{left:40vw;top:58vh;width:95vmin}.intro-ribbons{width:155%;left:-25%}.intro-orb{left:56%;width:33vmin;height:33vmin}.intro-confetti i{width:calc(var(--size,12px)*.75);height:calc(var(--size,12px)*.75)}}
     @media(max-width:680px){.intro-runner{width:64px;height:54px;top:54%}.intro-thread{width:110px;right:calc(100% + 5px)}.name-kitten{width:56px;height:56px}}
     @media(prefers-reduced-motion:reduce){.page-intro{display:none!important}.name-kitten.is-waving{animation:none;opacity:1}.name-kitten .lick-a{animation:none!important}}
   </style>
 </head>
 <body>
   <div class="page-intro" aria-hidden="true">
-    <div class="intro-veil"></div>
+    <div class="intro-veil"><div class="intro-rosette"></div><div class="intro-rosette alt"></div><div class="intro-print-orbit"></div></div>
+    <svg class="intro-ribbons" viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="openingCoral" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#ed725a"/><stop offset=".6" stop-color="#f19f76"/><stop offset="1" stop-color="#e7ba48"/></linearGradient>
+        <linearGradient id="openingBlue"><stop stop-color="#a8c8a8"/><stop offset=".48" stop-color="#4b95b3"/><stop offset="1" stop-color="#c6a5d4"/></linearGradient>
+      </defs>
+      <path class="colour-ribbon" pathLength="1" stroke="url(#openingCoral)" stroke-width="44" d="M-90 720C160 790 260 155 520 160S710 480 940 295 1190 35 1530 175"/>
+      <path class="colour-ribbon blue" pathLength="1" stroke="url(#openingBlue)" stroke-width="24" d="M-70 625C140 670 260 790 490 690S690 480 890 650 1210 825 1530 545"/>
+      <path class="colour-ribbon gold" pathLength="1" stroke="#e5bc43" stroke-width="12" d="M-60 550C180 465 175 285 310 295S435 650 685 570 890 80 1115 145 1200 405 1500 255"/>
+      <path class="colour-ribbon fine-ribbon" pathLength="1" stroke="#4487a4" d="M-50 700C200 745 250 110 515 130S760 490 960 275 1280 20 1530 145"/>
+    </svg>
+    <div class="intro-orb"></div>
+    <div class="intro-confetti">
+      <i class="star" style="--x:9%;--y:56%;--size:30px;--delay:.18s;--colour:#ec775b"></i>
+      <i class="tape" style="--x:15%;--y:30%;--size:9px;--delay:.4s;--colour:#76a6b9;--turn:-160deg"></i>
+      <i class="dot" style="--x:22%;--y:76%;--size:11px;--delay:.55s;--colour:#d7b644"></i>
+      <i class="star" style="--x:29%;--y:20%;--size:40px;--delay:.65s;--colour:#e6b73e"></i>
+      <i class="tape" style="--x:36%;--y:61%;--size:10px;--delay:.75s;--colour:#cbacd3;--turn:210deg"></i>
+      <i class="star" style="--x:43%;--y:82%;--size:25px;--delay:.85s;--colour:#5294aa"></i>
+      <i class="dot" style="--x:48%;--y:39%;--size:9px;--delay:.95s;--colour:#ef7259"></i>
+      <i class="tape" style="--x:55%;--y:17%;--size:8px;--delay:1s;--colour:#dcae43;--turn:-160deg"></i>
+      <i class="star" style="--x:61%;--y:68%;--size:36px;--delay:1.12s;--colour:#ef7259"></i>
+      <i class="dot" style="--x:67%;--y:85%;--size:12px;--delay:1.2s;--colour:#86af99"></i>
+      <i class="star" style="--x:73%;--y:26%;--size:30px;--delay:1.25s;--colour:#c29ccf"></i>
+      <i class="tape" style="--x:79%;--y:65%;--size:8px;--delay:1.35s;--colour:#4e95ad;--turn:240deg"></i>
+      <i class="star" style="--x:85%;--y:46%;--size:40px;--delay:1.4s;--colour:#e2b53d"></i>
+      <i class="dot" style="--x:90%;--y:18%;--size:9px;--delay:1.45s;--colour:#ef7259"></i>
+      <i class="star" style="--x:94%;--y:76%;--size:24px;--delay:1.5s;--colour:#87ad99"></i>
+    </div>
     <div class="intro-runner">
       <svg class="intro-thread" viewBox="0 0 176 42"><path class="thread-gold" d="M2 30C26 12 41 38 70 27S102 9 126 25 150 31 176 25"/><path class="thread-blue" d="M32 32C60 37 63 17 89 23S125 37 155 27"/><path class="thread-star" d="m48 8 2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path class="thread-star" d="m121 1 1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z"/></svg>
       <svg viewBox="0 0 112 92">
@@ -604,7 +658,7 @@
 
     <section class="section" id="competitions" data-chapter="03"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> 03 / Competitions · Practice under pressure</div><h2>Push My Limits.<br>Go Further.</h2></div><p class="section-note">Whatever the medium, I love a good challenge.<br><br>Debating, interpreting, public speaking, translating, reading and writing, and making short videos.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#d49e36"></span> 03 / Competitions · Practice under pressure</div><h2>Push My Limits.<br>Go Further.</h2></div><p class="section-note">Debating, interpreting, public speaking, translating, reading and writing, and making short videos... Whatever the medium, I love a good challenge.</p></div>
         <div class="debate-strip reveal">
           <div><div class="eyebrow" style="color:#ddd3c8"><span class="dot" style="background:var(--yellow)"></span> Debate · First on the bill</div><h3>Arguments with a pulse.</h3><p>Multiple roles, one team, and a room full of questions.</p></div>
           <div class="debate-award"><span>National Final · Bronze · 2026</span><span>East China Regional · Gold · 2025</span><span>East China Regional · Bronze · 2025</span><span>Campus Champion · 2025</span></div>
@@ -623,7 +677,7 @@
 
     <section class="section" id="global" data-chapter="04"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#82a88b"></span> 04 / Global experiences · Across borders</div><h2>Language grows<br>between people.</h2></div><p class="section-note">Always in conversation with the world</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#82a88b"></span> 04 / Global experiences · Across borders</div><h2>Language grows<br>between people.</h2></div><p class="section-note english-note-global"><span class="note-phrase">Always in conversation</span> <span class="note-phrase">with the world</span></p></div>
         <div class="global-grid">
           <article class="passport reveal"><img src="images/ucl-presentation.jpg" alt="Shi Qingying presenting during the UCL Institute of Education winter programme"><div class="passport-copy"><div class="passport-date">Jan — Feb 2025 · London</div><h3>UCL Institute of Education</h3><div class="place">Winter Academic Programme · Education</div><p>Explored EAP, UCL academic culture, early years and primary education, TESOL, and educational psychology.</p></div></article>
           <article class="passport reveal delay-1"><img src="images/green-low-carbon-interpreting.jpg" alt="Shi Qingying with Erik Solheim at the Green Low-Carbon Innovation Conference"><div class="passport-copy"><div class="passport-date">Aug 2025 · Huzhou</div><h3>Green Low-Carbon Innovation Conference</h3><div class="place">Liaison interpreting volunteer</div><p>Supported the visit of Erik Solheim, former UN Under-Secretary-General, with interpretation and guest coordination around the conference and sustainability seminar.</p></div></article>
@@ -638,7 +692,7 @@
 
     <section class="section" id="honors" data-chapter="05"><span class="meteor" aria-hidden="true"></span>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#c295bd"></span> 05 / Honors & awards · Proof in the work</div><h2>Milestones,<br>kept close.</h2></div><p class="section-note">Grateful for how far I’ve come. Still moving forward.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow"><span class="dot" style="background:#c295bd"></span> 05 / Honors & awards · Proof in the work</div><h2>Milestones,<br>kept close.</h2></div><p class="section-note english-note-honors"><span class="note-line">Grateful for how far I’ve come.</span><span class="note-line">Still moving forward.</span></p></div>
         <div class="honor-collage">
           <article class="honor-card reveal"><a href="images/award-national-scholarship.jpg" target="_blank" rel="noreferrer"><img src="images/award-national-scholarship.jpg" alt="China National Scholarship certificate, 2024–2025"><div class="caption">China National Scholarship</div><div class="subcaption">2024–2025 · National</div></a></article>
           <article class="honor-card reveal delay-1"><a href="images/award-top-ten-students.jpg" target="_blank" rel="noreferrer"><img src="images/award-top-ten-students.jpg" alt="Top Ten Students certificate from Huzhou Normal University"><div class="caption">Top Ten Students</div><div class="subcaption">Huzhou Normal University · 2026</div></a></article>
